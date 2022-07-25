@@ -11,7 +11,12 @@
     <ClInclude Include="math\Vector2.h">
       <Filter>math</Filter>
     </ClInclude>
-    <ClInclude Include="core\Game.h" />
+    <ClInclude Include="core\Game.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="Sandbox\main.h">
+      <Filter>Sandbox</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Grass.cpp" />
@@ -27,7 +32,9 @@
     <ClCompile Include="Sandbox\main.cpp">
       <Filter>Sandbox</Filter>
     </ClCompile>
-    <ClCompile Include="core\Game.cpp" />
+    <ClCompile Include="core\Game.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" />
@@ -42,7 +49,7 @@
     <Filter Include="Sandbox">
       <UniqueIdentifier>{0255a349-aa22-41d7-978c-6d3b46cfe245}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Core">
+    <Filter Include="core">
       <UniqueIdentifier>{8558fb0f-cc9d-4e36-8869-8b3e3b5defce}</UniqueIdentifier>
     </Filter>
   </ItemGroup>

@@ -55,36 +55,9 @@ void Game::Loop()
 			}
 		}
 
-		
+		Update(static_cast<double>(1) / 60);
 		Draw();
 	}
 
 }
 
-
-
-// Loops and start
-void Game::Once()
-{
-
-}
-
-void Game::Update(double delta_time)
-{
-	OnUpdate(delta_time);
-}
-
-void Game::OnUpdate()
-{
-
-}
-
-void Game::Draw()
-{
-
-}
-
-void Game::OnDraw()
-{
-
-}

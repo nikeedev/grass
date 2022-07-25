@@ -2,11 +2,33 @@
 #include "../Grass.h"
 
 
+class Main : public Game 
+{
 
-Entity* e = new Entity(new Vector2(60, 60), new Size(20, 20), new Size(600, 600));
+public:
+	Main() = default;
+
+	void Once()
+	{
+
+	}
+	
+	void Update(double delta_time)
+	{
+
+	}
+	
+	void Draw()
+	{
+
+	}
+};
+
 
 
 int main()
 {
-	std::cout << "Width of entity: " << e->size->width << "\n" << "Height of entity: " << e->size->height << std::endl;
+	Main game;
+
+	game.Loop();
 }

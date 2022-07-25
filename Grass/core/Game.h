@@ -4,12 +4,13 @@
 #include <SDL2/SDL.h>
 #include <iostream>
 #include <memory>
+#undef main
 
 
 
 class Game
 {
-private:
+protected:
 	Size* ScreenSize;
 	const char* Title;
 	
@@ -18,21 +19,22 @@ private:
 	SDL_Renderer* renderer;
 	SDL_Event     event;
 
+	bool isRunning;
+
 public:
+
 	Game(const char* Title, Size* ScreenSize);
 	~Game();
 
-	void Once();
-	void Update(double delta_time);
-	void OnUpdate();
-	void Draw();
-	void OnDraw();
-		
-
-	bool isRunning;
-
-private:
 	void Loop();
+
+
+protected:
+
+	virtual void Once() = 0;
+	virtual void Update(double delta_time) = 0;
+	virtual void Draw() = 0;
+	
 
 };
 
