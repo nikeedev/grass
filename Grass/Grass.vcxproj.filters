@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="Grass.h" />
+    <ClInclude Include="objects\Entity.h">
+      <Filter>objects</Filter>
+    </ClInclude>
+    <ClInclude Include="math\Size.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="math\Vector2.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="core\Game.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Grass.cpp" />
+    <ClCompile Include="objects\Entity.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
+    <ClCompile Include="math\Size.cpp">
+      <Filter>math</Filter>
+    </ClCompile>
+    <ClCompile Include="math\Vector2.cpp">
+      <Filter>math</Filter>
+    </ClCompile>
+    <ClCompile Include="Sandbox\main.cpp">
+      <Filter>Sandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="core\Game.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="objects">
+      <UniqueIdentifier>{2a89a6d4-f38a-493a-a356-2a4bdd4cdf56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="math">
+      <UniqueIdentifier>{9427e7c6-c5b2-4284-96f9-6e8b65e40c65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sandbox">
+      <UniqueIdentifier>{0255a349-aa22-41d7-978c-6d3b46cfe245}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core">
+      <UniqueIdentifier>{8558fb0f-cc9d-4e36-8869-8b3e3b5defce}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
