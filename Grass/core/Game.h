@@ -14,6 +14,7 @@ protected:
 	Size* ScreenSize;
 	const char* Title;
 	
+	Uint8 background_color[4] = {0, 0, 0, 0};
 
 	SDL_Window* window;
 	SDL_Renderer* renderer;
@@ -31,8 +32,9 @@ public:
 
 protected:
 
+	
 	virtual void Once() = 0;
-	virtual void Update(double delta_time) = 0;
+	virtual void Update(double ts) = 0;
 	virtual void Draw() = 0;
 	
 

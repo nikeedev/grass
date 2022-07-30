@@ -38,6 +38,8 @@ Game::~Game()
 
 void Game::Loop()
 {
+	isRunning = true;
+
 	Once();
 
 	while (isRunning)
@@ -55,8 +57,20 @@ void Game::Loop()
 			}
 		}
 
-		Update(static_cast<double>(1) / 60);
+		Update(1.0 / 60.0);
+
+		
+		
+		SDL_RenderClear(renderer);
+
+
+		SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
+
 		Draw();
+
+		SDL_SetRenderDrawColor(renderer, background_color[0], background_color[1], background_color[2], background_color[3]);
+
+		SDL_RenderPresent(renderer);
 	}
 
 }

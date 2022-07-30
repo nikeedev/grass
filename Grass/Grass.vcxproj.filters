@@ -14,7 +14,7 @@
     <ClInclude Include="core\Game.h">
       <Filter>core</Filter>
     </ClInclude>
-    <ClInclude Include="Sandbox\main.h">
+    <ClInclude Include="Sandbox\MyGame.h">
       <Filter>Sandbox</Filter>
     </ClInclude>
   </ItemGroup>
@@ -34,6 +34,9 @@
     </ClCompile>
     <ClCompile Include="core\Game.cpp">
       <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="Sandbox\MyGame.cpp">
+      <Filter>Sandbox</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
