@@ -5,9 +5,9 @@
 class MyGame : public Game
 {
 public:
-	static Entity* box;
+	
 
-	MyGame() : Game("Game", new Size(800, 600)) {};
+	MyGame() : Game("Game", new Size(800, 600), new Color(100, 149, 237, 0)) {};
 
 	void Once() override;
 	void Update(double ts) override;

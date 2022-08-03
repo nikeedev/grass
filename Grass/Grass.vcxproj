@@ -155,6 +155,7 @@
     <ClInclude Include="objects\Entity.h" />
     <ClInclude Include="Grass.h" />
     <ClInclude Include="Sandbox\MyGame.h" />
+    <ClInclude Include="utils\Color.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="core\Game.cpp" />
@@ -164,6 +165,7 @@
     <ClCompile Include="Grass.cpp" />
     <ClCompile Include="Sandbox\main.cpp" />
     <ClCompile Include="Sandbox\MyGame.cpp" />
+    <ClCompile Include="utils\Color.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" />

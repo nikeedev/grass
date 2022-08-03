@@ -1,10 +1,11 @@
 #include "Entity.h"
 
 
-Entity::Entity(Vector2* position, Size* size)
+Entity::Entity(Vector2* position, Size* size, Color* color = new Color(0, 0, 0, 255))
 {
 	this->position = position;
 	this->size = size;
+	this->color = color;
 
 	box.x = this->position->x;
 	box.y = this->position->y;
@@ -17,7 +18,7 @@ Entity::Entity(Vector2* position, Size* size)
 
 Entity::~Entity()
 {
-	delete &box;
+	delete& box;
 }
 
 
@@ -29,6 +30,7 @@ void Entity::Draw(SDL_Renderer* renderer)
 	box.w = size->width;
 	box.h = size->height;
 
+	SDL_SetRenderDrawColor(renderer, color->r, color->g, color->b, color->a);
 	SDL_RenderFillRect(renderer, &box);
 }
 

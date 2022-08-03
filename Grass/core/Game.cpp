@@ -1,11 +1,11 @@
-#include "../math/Size.h"
 #include "Game.h"
 
 
-Game::Game(const char* Title, Size* ScreenSize)
+Game::Game(const char* Title, Size* ScreenSize, Color* background_color)
 {
 	this->Title = Title;
 	this->ScreenSize = ScreenSize;
+	this->background_color = background_color;
 
 	window = SDL_CreateWindow(Title,
 		SDL_WINDOWPOS_CENTERED,
@@ -68,7 +68,7 @@ void Game::Loop()
 
 		Draw();
 
-		SDL_SetRenderDrawColor(renderer, background_color[0], background_color[1], background_color[2], background_color[3]);
+		SDL_SetRenderDrawColor(renderer, background_color->r, background_color->g, background_color->b, background_color->a);
 
 		SDL_RenderPresent(renderer);
 	}

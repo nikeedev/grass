@@ -17,6 +17,9 @@
     <ClInclude Include="Sandbox\MyGame.h">
       <Filter>Sandbox</Filter>
     </ClInclude>
+    <ClInclude Include="utils\Color.h">
+      <Filter>utils</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Grass.cpp" />
@@ -38,6 +41,9 @@
     <ClCompile Include="Sandbox\MyGame.cpp">
       <Filter>Sandbox</Filter>
     </ClCompile>
+    <ClCompile Include="utils\Color.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" />
@@ -54,6 +60,9 @@
     </Filter>
     <Filter Include="core">
       <UniqueIdentifier>{8558fb0f-cc9d-4e36-8869-8b3e3b5defce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils">
+      <UniqueIdentifier>{3aaa986f-97cb-45f4-b160-585025fce035}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
