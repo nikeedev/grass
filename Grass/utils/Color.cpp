@@ -10,7 +10,7 @@ Color::Color()
 }
 
 
-Color::Color(Uint8 r, Uint8 g, Uint8 b, Uint8 a)
+Color::Color(Uint8 r, Uint8 g, Uint8 b, Uint8 a = 255)
 {
 	this->r = r;
 	this->g = g;
@@ -18,14 +18,6 @@ Color::Color(Uint8 r, Uint8 g, Uint8 b, Uint8 a)
 	this->a = a;
 }
 
-
-Color::Color(Uint8 r, Uint8 g, Uint8 b)
-{
-	this->r = r;
-	this->g = g;
-	this->b = b;
-	this->a = 255;
-}
 
 Color::~Color()
 {};

@@ -1,5 +1,6 @@
 #include "Game.h"
 
+bool Game::debug_mode = false;
 
 Game::Game(const char* Title, Size* ScreenSize, Color* background_color)
 {
@@ -15,19 +16,29 @@ Game::Game(const char* Title, Size* ScreenSize, Color* background_color)
 
 	if (!window)
 	{
-		std::cout << "Failed to create window\n";
+		Log("Failed to create window\n", 3);
 		std::cout << "SDL2 Error: " << SDL_GetError() << "\n";
 		return;
+	}
+	else if (window && debug_mode)
+	{
+		Log("Window succesfully created\n");
+		Log("Setting up renderer...\n");
 	}
 
 	renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
 
 	if (!renderer)
 	{
-		std::cout << "Failed to get window's surface\n";
+		Log("Failed to get window's surface\n");
 		std::cout << "SDL2 Error: " << SDL_GetError() << "\n";
 		return;
 	}
+	else if (renderer && debug_mode)
+	{
+		Log("Renderer succesfully created\n");
+	}
+
 }
 
 Game::~Game()
@@ -40,6 +51,7 @@ void Game::Loop()
 {
 	isRunning = true;
 
+	std:
 	Once();
 
 	while (isRunning)
@@ -52,6 +64,59 @@ void Game::Loop()
 				isRunning = false;
 				break;
 
+			case SDL_KEYDOWN:
+				switch (event.key.keysym.sym) {
+
+				case SDLK_UP:
+					Input::keyBools[1] = true;
+					break;
+				case SDLK_DOWN:
+					Input::keyBools[2] = true;
+					break;
+
+				case SDLK_LEFT:
+					Input::keyBools[3] = true;
+					break;
+				case SDLK_RIGHT:
+					Input::keyBools[4] = true;
+					break;
+
+				case SDLK_SPACE:
+					Input::keyBools[4] = true;
+					break;
+				
+
+				case SDLK_ESCAPE:
+					isRunning = false;
+
+				default:
+					break;
+				}
+				break;
+
+			case SDL_KEYUP:
+				switch (event.key.keysym.sym) {
+				case SDLK_UP:
+					Input::keyBools[1] = false;
+					break;
+				case SDLK_DOWN:
+					Input::keyBools[2] = false;
+					break;
+
+				case SDLK_LEFT:
+					Input::keyBools[3] = false;
+					break;
+				case SDLK_RIGHT:
+					Input::keyBools[4] = false;
+					break;
+
+				case SDLK_SPACE:
+					Input::keyBools[4] = false;
+					break;
+
+				default:
+					break;
+				}
 			default:
 				break;
 			}

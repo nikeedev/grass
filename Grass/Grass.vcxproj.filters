@@ -20,6 +20,12 @@
     <ClInclude Include="utils\Color.h">
       <Filter>utils</Filter>
     </ClInclude>
+    <ClInclude Include="core\Input.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\Log.h">
+      <Filter>utils</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Grass.cpp" />
@@ -44,9 +50,12 @@
     <ClCompile Include="utils\Color.cpp">
       <Filter>utils</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="README.md" />
+    <ClCompile Include="core\Input.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\Log.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="objects">

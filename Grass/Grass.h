@@ -5,4 +5,5 @@
 #include "objects/Entity.h"
 #include "core/Game.h"
 #include "utils/Color.h"
+#include "core/Input.h"
 

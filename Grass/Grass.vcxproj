@@ -150,6 +150,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="core\Game.h" />
+    <ClInclude Include="core\Input.h" />
+    <ClInclude Include="utils\Log.h" />
     <ClInclude Include="math\Size.h" />
     <ClInclude Include="math\Vector2.h" />
     <ClInclude Include="objects\Entity.h" />
@@ -159,6 +161,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="core\Game.cpp" />
+    <ClCompile Include="core\Input.cpp" />
+    <ClCompile Include="utils\Log.cpp" />
     <ClCompile Include="math\Size.cpp" />
     <ClCompile Include="math\Vector2.cpp" />
     <ClCompile Include="objects\Entity.cpp" />
@@ -166,9 +170,6 @@
     <ClCompile Include="Sandbox\main.cpp" />
     <ClCompile Include="Sandbox\MyGame.cpp" />
     <ClCompile Include="utils\Color.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="README.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

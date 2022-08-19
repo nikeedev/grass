@@ -6,6 +6,9 @@
 #include <memory>
 #include "../math/Size.h"
 #include "../utils/Color.h"
+#include "Input.h"
+#include "../utils/Log.h"
+
 #undef main
 
 
@@ -16,11 +19,13 @@ protected:
 	Size* ScreenSize;
 	const char* Title;
 	
-	Color* background_color;
+	static Color* background_color;
 
 	SDL_Window* window;
 	SDL_Renderer* renderer;
 	SDL_Event     event;
+
+	static bool debug_mode;
 
 	bool isRunning;
 
@@ -28,8 +33,9 @@ protected:
 
 	Color* black_color = new Color(0, 0, 0, 255);
 	Color* white_color = new Color(255, 255, 255, 255);
-
 public:
+
+
 
 	Game(const char* Title, Size* ScreenSize, Color* background_color);
 	~Game();

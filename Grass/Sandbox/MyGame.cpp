@@ -6,6 +6,8 @@
 
 Entity* box = new Entity(new Vector2(128, 128), new Size(64, 64), new Color(124, 34, 11, 255));
 
+bool MyGame::debug_mode = true;
+
 /**
 	The code will be runned once, before running the update and draw loop
 */
