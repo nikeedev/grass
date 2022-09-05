@@ -52,7 +52,6 @@ void Game::Loop()
 {
 	isRunning = true;
 
-	std:
 	Once();
 
 	while (isRunning)

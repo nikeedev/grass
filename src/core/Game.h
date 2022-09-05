@@ -19,13 +19,13 @@ protected:
 	Size* ScreenSize;
 	const char* Title;
 	
-	static Color background_color;
+	Color background_color;
 
 	SDL_Window* window;
 	SDL_Renderer* renderer;
 	SDL_Event     event;
 
-	static bool debug_mode;
+	bool debug_mode;
 
 	bool isRunning;
 

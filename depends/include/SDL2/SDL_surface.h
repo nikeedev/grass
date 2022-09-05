@@ -61,8 +61,6 @@ extern "C" {
  */
 #define SDL_MUSTLOCK(S) (((S)->flags & SDL_RLEACCEL) != 0)
 
-typedef struct SDL_BlitMap SDL_BlitMap;  /* this is an opaque type. */
-
 /**
  * \brief A collection of pixels used in software blitting.
  *
@@ -90,7 +88,7 @@ typedef struct SDL_Surface
     SDL_Rect clip_rect;         /**< Read-only */
 
     /** info for fast blit mapping to other surfaces */
-    SDL_BlitMap *map;           /**< Private */
+    struct SDL_BlitMap *map;    /**< Private */
 
     /** Reference count -- used when freeing surface */
     int refcount;               /**< Read-mostly */
