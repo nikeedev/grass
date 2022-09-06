@@ -16,9 +16,10 @@
 class Game
 {
 protected:
-	Size* ScreenSize;
 	const char* Title;
-	
+
+	Size ScreenSize;
+
 	Color background_color;
 
 	SDL_Window* window;

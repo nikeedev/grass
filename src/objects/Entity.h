@@ -17,6 +17,7 @@ protected:
     SDL_Rect box;
 
 public:
+
     Entity(Vector2 position, Size size, Color color);
     
     ~Entity();

@@ -6,7 +6,7 @@ Color Game::white_color(255, 255, 255, 255);
 Game::Game(const char* Title, Size ScreenSize, Color background_color, bool debug_mode = false)
 {
 	this->Title = Title;
-	this->ScreenSize = &ScreenSize;
+	this->ScreenSize = ScreenSize;
 	this->background_color = background_color;
 	this->debug_mode = debug_mode;
 	window = SDL_CreateWindow(Title,
@@ -23,8 +23,8 @@ Game::Game(const char* Title, Size ScreenSize, Color background_color, bool debu
 	}
 	else if (window && debug_mode)
 	{
-		Log("Window successfully created\n");
-		Log("Setting up renderer...\n");
+		Log("Window successfully created");
+		Log("Setting up renderer...");
 	}
 
 	renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
@@ -37,7 +37,7 @@ Game::Game(const char* Title, Size ScreenSize, Color background_color, bool debu
 	}
 	else if (renderer && debug_mode)
 	{
-		Log("Renderer successfully created\n");
+		Log("Renderer successfully created");
 	}
 
 }
@@ -45,7 +45,13 @@ Game::Game(const char* Title, Size ScreenSize, Color background_color, bool debu
 Game::~Game()
 {
 	SDL_DestroyRenderer(renderer);
+	if (debug_mode)
+		Log("Renderer destoyed");
 	SDL_DestroyWindow(window);
+	if (debug_mode)
+		Log("Window destroyed");
+	
+	Log("Game successfully finished");
 }
 
 void Game::Loop()
