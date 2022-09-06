@@ -8,16 +8,16 @@
 class Entity {
 
 public:
-    Vector2* position;
-    Size* size;
-    Color* color;
+    Vector2 position;
+    Size size;
+    Color color;
 
 protected:
 
     SDL_Rect box;
 
 public:
-    Entity(Vector2* position, Size* size, Color* color);
+    Entity(Vector2 position, Size size, Color color);
     
     ~Entity();
 
