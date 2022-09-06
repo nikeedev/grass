@@ -30,11 +30,11 @@ float Vector2::magnitude()
 	return sqrt(this->x * this->x + this->y * this->y);
 }
 
-Vector2* Vector2::lerp(Vector2* v1, Vector2* v2, float t)
+Vector2 Vector2::lerp(Vector2 v1, Vector2 v2, float t)
 {
-	float x = v1->x * (1 - t) + v2->x * t;
-	float y = v1->y * (1 - t) + v2->y * t;
-	return new Vector2(x, y);
+	float x = v1.x * (1 - t) + v2.x * t;
+	float y = v1.y * (1 - t) + v2.y * t;
+	return Vector2(x, y);
 };
 
 

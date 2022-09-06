@@ -18,7 +18,7 @@ public:
 
 	float magnitude();
 
-	Vector2* lerp(Vector2* v1, Vector2* v2, float t);
+	Vector2 lerp(Vector2 v1, Vector2 v2, float t);
 
 };
 
