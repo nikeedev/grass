@@ -5,7 +5,7 @@
 #include "../utils/Color.h"
 #include "SDL2/SDL.h"
 
-class Entity {
+class Box {
 
 public:
     Vector2 position;
@@ -18,9 +18,9 @@ protected:
 
 public:
 
-    Entity(Vector2 position, Size size, Color color);
+    Box(Vector2 position, Size size, Color color);
     
-    ~Entity();
+    ~Box();
 
     void Draw(SDL_Renderer* renderer);
     

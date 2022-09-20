@@ -1,7 +1,7 @@
-#include "Entity.h"
+#include "Box.h"
 
 
-Entity::Entity(Vector2 position, Size size, Color color = Color(0, 0, 0, 255))
+Box::Box(Vector2 position, Size size, Color color = Color(0, 0, 0, 255))
 {
 	this->position = position;
 	this->size = size;
@@ -16,12 +16,12 @@ Entity::Entity(Vector2 position, Size size, Color color = Color(0, 0, 0, 255))
 
 
 
-Entity::~Entity()
+Box::~Box()
 {}
 
 
 
-void Entity::Draw(SDL_Renderer* renderer)
+void Box::Draw(SDL_Renderer* renderer)
 {
 	box.x = position.x;
 	box.y = position.y;

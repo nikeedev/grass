@@ -1,9 +1,9 @@
 #include <iostream>
 #include "MyGame.h"
 
-//Entity box(Vector2(128, 128), Size(64, 64), Color(124, 34, 11, 255));
+//Box box(Vector2(128, 128), Size(64, 64), Color(124, 34, 11, 255));
 
-Sprite circle("./assets/Black_Circle2_px.png", Vector2(128, 128));
+Sprite circle("assets/Black_Circle.png", Vector2(128, 128));
 
 int speed = 50;
 

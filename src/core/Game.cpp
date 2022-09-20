@@ -97,7 +97,7 @@ void Game::Loop()
 					break;
 
 				case SDLK_SPACE:
-					Input::keyBools[4] = true;
+					Input::keyBools[5] = true;
 					break;
 				
 
@@ -126,7 +126,7 @@ void Game::Loop()
 					break;
 
 				case SDLK_SPACE:
-					Input::keyBools[4] = false;
+					Input::keyBools[5] = false;
 					break;
 
 				default:
@@ -141,7 +141,7 @@ void Game::Loop()
 
 		SDL_RenderClear(renderer);
 		SDL_SetRenderDrawColor(renderer, background_color.r, background_color.g, background_color.b, background_color.a);
-		Draw();
+		Draw();	
 		
 		SDL_RenderPresent(renderer);
 	}

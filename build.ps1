@@ -1,3 +1,7 @@
 mingw32-make
 
-./build/game
+cd build 
+
+start "C:\Users\nikgon07\OneDrive - Tysvær kommune\Desktop\MyCode\cpp\grass\build\game.exe"
+
+cd ..
