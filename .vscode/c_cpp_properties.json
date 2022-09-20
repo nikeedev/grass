@@ -13,7 +13,8 @@
             ],
             "compilerPath": "C:\\Program Files\\mingw64\\bin\\g++.exe",
             "cppStandard": "c++20",
-            "intelliSenseMode": "windows-gcc-x64"
+            "intelliSenseMode": "windows-gcc-x64",
+            "configurationProvider": "ms-vscode.makefile-tools"
         }
     ],
     "version": 4

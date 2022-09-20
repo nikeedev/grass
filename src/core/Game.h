@@ -11,6 +11,7 @@
 
 #undef main
 
+constexpr auto engine_version = "0.1.2a";
 
 
 class Game
@@ -22,9 +23,11 @@ protected:
 
 	Color background_color;
 
-	SDL_Window* window;
-	SDL_Renderer* renderer;
+	SDL_Window* window = NULL;
+	SDL_Renderer* renderer = NULL;
 	SDL_Event     event;
+	SDL_Surface* surface = NULL;
+	SDL_Surface* imageSurface = NULL;
 
 	bool debug_mode;
 

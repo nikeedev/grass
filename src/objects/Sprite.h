@@ -9,17 +9,19 @@
 class Sprite {
 
 public:
+
     char* path;
     Vector2 position;
-    Size size;
 
 private:
 
  
 
-    SDL_Rect texture;
+    SDL_Rect texture_rect;
 
-    SDL_Texture* img = NULL; 
+    SDL_Texture* texture = NULL; 
+
+    SDL_Surface* img_surface = NULL;
 
 public:
 
@@ -27,9 +29,10 @@ public:
     
     ~Sprite();
 
-    void Draw(SDL_Renderer* renderer);
-    
     void init(SDL_Renderer* renderer);
+
+    void draw(SDL_Renderer* renderer);
+    
 
 };
 

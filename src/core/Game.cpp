@@ -24,6 +24,7 @@ Game::Game(const char* Title, Size ScreenSize, Color background_color, bool debu
 	}
 	else if (window && debug_mode)
 	{
+		surface = SDL_GetWindowSurface( window );
 		Log("Window successfully created");
 		Log("Setting up renderer...");
 	}
@@ -40,18 +41,25 @@ Game::Game(const char* Title, Size ScreenSize, Color background_color, bool debu
 	{
 		Log("Renderer successfully created");
 	}
+	
+	SDL_version sdl_version;
+	SDL_GetVersion(&sdl_version);
 
+	std::cout << "\nGrass Engine v" << engine_version << " | SDL2 v" << (int)sdl_version.major << "." << (int)sdl_version.major << "." << (int)sdl_version.patch << "\n\n";
 }
 
 Game::~Game()
 {
 	SDL_DestroyRenderer(renderer);
 	if (debug_mode)
-		Log("Renderer destoyed");
+		Log("Renderer destroyed");
 	SDL_DestroyWindow(window);
+	window = NULL;
 	if (debug_mode)
 		Log("Window destroyed");
-	
+	SDL_FreeSurface(surface);
+
+
 	Log("Game successfully finished");
 }
 
@@ -131,16 +139,9 @@ void Game::Loop()
 
 		Update(1.0 / 60.0);
 
-		
-		
 		SDL_RenderClear(renderer);
-
-
-		SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
-
-		Draw();
-
 		SDL_SetRenderDrawColor(renderer, background_color.r, background_color.g, background_color.b, background_color.a);
+		Draw();
 		
 		SDL_RenderPresent(renderer);
 	}
