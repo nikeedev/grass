@@ -9,6 +9,7 @@ Game::Game(const char* Title, Size ScreenSize, Color background_color, bool debu
 	this->ScreenSize = ScreenSize;
 	this->background_color = background_color;
 	this->debug_mode = debug_mode;
+
 	window = SDL_CreateWindow(Title,
 		SDL_WINDOWPOS_CENTERED,
 		SDL_WINDOWPOS_CENTERED,
@@ -59,7 +60,7 @@ void Game::Loop()
 	isRunning = true;
 
 	Once();
-
+	
 	while (isRunning)
 	{
 		while (SDL_PollEvent(&event) > 0)
@@ -140,7 +141,7 @@ void Game::Loop()
 		Draw();
 
 		SDL_SetRenderDrawColor(renderer, background_color.r, background_color.g, background_color.b, background_color.a);
-
+		
 		SDL_RenderPresent(renderer);
 	}
 

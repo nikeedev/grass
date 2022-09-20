@@ -1,5 +1,5 @@
 
-ENGINE_FILES :=	src/core/Game.cpp src/core/Input.cpp src/math/Vector2.cpp src/math/Size.cpp src/objects/entity.cpp src/utils/Color.cpp src/utils/Log.cpp
+ENGINE_FILES :=	src/core/Game.cpp src/core/Input.cpp src/math/Vector2.cpp src/math/Size.cpp src/objects/Entity.cpp src/objects/Sprite.cpp src/utils/Color.cpp src/utils/Log.cpp
 
 SANDBOX_FILES := sandbox/main.cpp sandbox/MyGame.cpp
 
@@ -7,6 +7,6 @@ CC_FLAGS := -Wall
 
 
 all:
-	g++ -Ldepends/lib -Idepends/include $(ENGINE_FILES) $(SANDBOX_FILES) -o build/game.exe $(CC_FLAGS) -lmingw32 -lSDL2main -lSDL2
+	g++ -Ldepends/lib -Idepends/include $(ENGINE_FILES) $(SANDBOX_FILES) -o build/game.exe $(CC_FLAGS) -lmingw32 -lSDL2main -lSDL2 -lSDL2_image
 
 

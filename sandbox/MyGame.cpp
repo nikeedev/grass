@@ -1,7 +1,9 @@
 #include <iostream>
 #include "MyGame.h"
 
-Entity box(Vector2(128, 128), Size(64, 64), Color(124, 34, 11, 255));
+//Entity box(Vector2(128, 128), Size(64, 64), Color(124, 34, 11, 255));
+
+Sprite circle("/assets/Black_Circle.png", Vector2(128, 128));
 
 int speed = 50;
 
@@ -10,7 +12,7 @@ int speed = 50;
 */
 void MyGame::Once()
 {
-
+	circle.init(renderer);
 }
 
 /**
@@ -18,11 +20,14 @@ void MyGame::Once()
 */
 void MyGame::Update(double ts)
 {
+	/*
 	box.size.width += speed * ts;
 	box.size.height += speed * ts;
 
 	box.position.x += speed * ts;
 	box.position.y += speed * ts;
+	*/
+
 
 }
 
@@ -32,5 +37,6 @@ void MyGame::Update(double ts)
 */
 void MyGame::Draw()
 {
-	box.Draw(renderer);
+	//box.Draw(renderer);
+	circle.Draw(renderer);
 }
