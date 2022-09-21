@@ -11,7 +11,7 @@
 
 #undef main
 
-constexpr auto engine_version = "0.1.2a";
+constexpr auto engine_version = "0.1.4a";
 
 
 class Game

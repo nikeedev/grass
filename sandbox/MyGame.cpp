@@ -3,7 +3,10 @@
 
 //Box box(Vector2(128, 128), Size(64, 64), Color(124, 34, 11, 255));
 
-Sprite circle("assets/Black_Circle.png", Vector2(128, 128));
+Sprite circle("../assets/textures/Black_Circle.png", Vector2(128, 128));
+
+Sprite circle2("../assets/textures/Black_Circle.png", Vector2(428, 428));
+
 
 int speed = 50;
 
@@ -13,6 +16,7 @@ int speed = 50;
 void MyGame::Once()
 {
 	circle.init(renderer);
+	circle2.init(renderer);
 }
 
 /**
@@ -39,4 +43,5 @@ void MyGame::Draw()
 {
 	//box.Draw(renderer);
 	circle.draw(renderer);
+	circle2.draw(renderer);
 }
