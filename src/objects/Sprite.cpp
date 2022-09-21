@@ -11,7 +11,16 @@ Sprite::Sprite(char* path, Vector2 position)
 void Sprite::init(SDL_Renderer* renderer)
 {
 
-	SDL_Surface* surface = IMG_Load(path); 
+    SDL_Surface* surface = IMG_Load(path); 
+
+
+    if (surface == NULL) {
+         SDL_Log("Failed to load image: %s\n", IMG_GetError());
+         /* Return, exit, or whatever to break the flow */
+         return 0;
+    }
+
+
     texture = SDL_CreateTextureFromSurface(renderer, surface); 
 
     texture_rect.w = surface->w;
