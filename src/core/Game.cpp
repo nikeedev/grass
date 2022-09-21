@@ -9,11 +9,11 @@ Game::Game(const char* Title, Size ScreenSize, Color background_color, bool debu
 	this->ScreenSize = ScreenSize;
 	this->background_color = background_color;
 	this->debug_mode = debug_mode;
-        
-        if (SDL_Init(SDL_INIT_EVERYTHING) < 0) {
-            fprintf(stderr, "Error SDL_Init : %s.\n", SDL_GetError());
-            return 1;
-        }
+	
+	if (SDL_Init(SDL_INIT_EVERYTHING) < 0) {
+		fprintf(stderr, "Error SDL_Init : %s.\n", SDL_GetError());
+			
+	}
 
 	window = SDL_CreateWindow(Title,
 		SDL_WINDOWPOS_CENTERED,

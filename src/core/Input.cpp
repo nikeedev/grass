@@ -1,26 +1,5 @@
 #include "Input.h"
 
-const char* Input::keys[5] =
-{
-	"up",
-
-	"down",
-
-	"left",
-
-	"right"
-
-	"space "
-};
-
-bool Input::keyBools[5] =
-{
-	false,
-	false,
-	false,
-	false,
-	false 
-};
 
 
 

@@ -1,11 +1,11 @@
 #pragma once
+#include "SDL.h"
 
 class Input
 {
 public:
-
-	static const char* keys[5];
-	static bool keyBools[5];
+	const uint8_t* keyboard;
+	
 
 	static bool KeyDown(const char* key);
 

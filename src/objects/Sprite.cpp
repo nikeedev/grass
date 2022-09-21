@@ -15,9 +15,9 @@ void Sprite::init(SDL_Renderer* renderer)
 
 
     if (surface == NULL) {
-         SDL_Log("Failed to load image: %s\n", IMG_GetError());
-         /* Return, exit, or whatever to break the flow */
-         return 0;
+        SDL_Log("Failed to load image: %s\n", IMG_GetError());
+        /* Return, exit, or whatever to break the flow */
+        // return 0;
     }
 
 
