@@ -2,6 +2,6 @@ mingw32-make
 
 cd build 
 
-start "game.exe"
+./game.exe
 
 cd ..

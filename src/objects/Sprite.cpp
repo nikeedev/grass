@@ -1,7 +1,7 @@
 #include "Sprite.h"
 
 
-Sprite::Sprite(char* path, Vector2 position)
+Sprite::Sprite(const char* path, Vector2 position)
 {
 	this->path = path;
 	this->position = position;

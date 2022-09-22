@@ -10,7 +10,7 @@ class Sprite {
 
 public:
 
-    char* path;
+    const char* path;
     Vector2 position;
 
 private:
@@ -25,7 +25,7 @@ private:
 
 public:
 
-    Sprite(char* path, Vector2 position);
+    Sprite(const char* path, Vector2 position);
     
     ~Sprite();
 
