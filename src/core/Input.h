@@ -1,13 +1,15 @@
 #pragma once
-#include "SDL.h"
+#include "SDL2/SDL.h"
 
 class Input
 {
 public:
-	const uint8_t* keyboard;
-	
 
-	static bool KeyDown(const char* key);
+	static void Update();
+
+	static const Uint8* keyboard_state;
+
+	static bool KeyDown(SDL_Scancode key);
 
 };
 

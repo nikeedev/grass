@@ -1,19 +1,15 @@
 #include "Input.h"
 
 
+void Input::Update()
+{
+	keyboard_state = SDL_GetKeyboardState(NULL);
+}
 
 
-bool Input::KeyDown(const char* key)
+bool Input::KeyDown(SDL_Scancode key)
 {	
-	bool answer;
-
-	for (int i = 0; i < (int)(sizeof(keys) / sizeof(const char*)); i++)
-	{
-		if (keys[i] == key)
-			answer = keyBools[i];
-	}
-
-	return answer;
+	return keyboard_state[key];
 }
 
 
