@@ -4,14 +4,15 @@
             "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${workspaceFolder}/depends/include"
+                "${workspaceFolder}/depends/SDL2-VC/include",
+                "${workspaceFolder}/depends/SDL2-mingw/include"
             ],
             "defines": [
                 "_DEBUG",
                 "UNICODE",
                 "_UNICODE"
             ],
-            "compilerPath": "C:\\Program Files\\mingw64\\bin\\g++.exe",
+            "compilerPath": "C:\\Users\\nikgon07\\AppData\\Local\\Programs\\mingw64\\bin\\g++.exe",
             "cppStandard": "c++20",
             "intelliSenseMode": "windows-gcc-x64",
             "configurationProvider": "ms-vscode.makefile-tools"

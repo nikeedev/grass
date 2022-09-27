@@ -50,7 +50,7 @@ Game::Game(const char* Title, Size ScreenSize, Color background_color, bool debu
 	SDL_version sdl_version;
 	SDL_GetVersion(&sdl_version);
 
-	std::cout << "\nGrass Engine v" << engine_version << " | SDL2 v" << (int)sdl_version.major << "." << (int)sdl_version.major << "." << (int)sdl_version.patch << "\n\n";
+	std::cout << "\nGrass Engine v" << engine_version << " | SDL2 v" << SDL_MAJOR_VERSION << "." << SDL_MINOR_VERSION << "." << SDL_PATCHLEVEL << "\n\n";
 }
 
 Game::~Game()
@@ -84,8 +84,17 @@ void Game::Loop()
 				isRunning = false;
 				break;
 
+			case SDL_KEYDOWN:
+				switch (event.key.keysym.sym)
+				{
+					case SDLK_ESCAPE:
+						isRunning = false;
+						break;
+				}
 			default:
 				break;
+
+			
 			}
 		}
 

@@ -31,7 +31,10 @@ void MyGame::Update(double ts)
 	box.position.x += speed * ts;
 	box.position.y += speed * ts;
 	*/
-
+	if (Input::KeyDown(SDL_SCANCODE_SPACE))
+	{
+		circle.position += Vector2(50*ts, 50*ts);
+	}
 
 }
 
