@@ -2,15 +2,15 @@
 #include "SDL2/SDL.h"
 #include <iostream>
 
-class Input
+
+class Input 
 {
-public:
+public: 
 
-	static void Update();
+	static const Uint8 *keyboard_state;
 
-	static const Uint8* keyboard_state;
+	static bool Input::KeyDown(SDL_Scancode key);
 
-	static bool KeyDown(SDL_Scancode key);
+}
 
-};
 

@@ -93,12 +93,11 @@ void Game::Loop()
 				}
 			default:
 				break;
-
 			
 			}
-		}
 
-		Input::Update();
+			Input::keyboard_state = SDL_GetKeyboardState(NULL);
+		}
 
 		Update(1.0 / 60.0);
 
