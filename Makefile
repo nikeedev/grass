@@ -7,6 +7,6 @@ CC_FLAGS := -Wall
 
 
 all:
-	g++ -Ldepends/SDL2-mingw/lib -Idepends/SDL2-mingw/include $(ENGINE_FILES) $(SANDBOX_FILES) -o build/game.exe $(CC_FLAGS) -lmingw32 -lSDL2main -lSDL2 -lSDL2_image
+	clang++ -Ldepends/SDL2-mingw/lib -Idepends/SDL2-mingw/include $(ENGINE_FILES) $(SANDBOX_FILES) -o build/game.exe $(CC_FLAGS) -lmingw32 -lSDL2main -lSDL2 -lSDL2_image
 
 
