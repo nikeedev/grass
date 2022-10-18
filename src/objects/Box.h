@@ -1,7 +1,7 @@
 #pragma once
 
 #include "../math/Vector2.h"
-#include "../math/Size.h"
+#include "../math/Vector2.h"
 #include "../utils/Color.h"
 #include "SDL2/SDL.h"
 
@@ -9,7 +9,7 @@ class Box {
 
 public:
     Vector2 position;
-    Size size;
+    Vector2 size;
     Color color;
 
 protected:
@@ -18,7 +18,7 @@ protected:
 
 public:
 
-    Box(Vector2 position, Size size, Color color);
+    Box(Vector2 position, Vector2 size, Color color);
     
     ~Box();
 

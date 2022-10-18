@@ -2,12 +2,12 @@
 #include "../src/Grass.h"
 
 
-class MyGame : public Game
+class MyGame : public Application
 {
 public:
 	
 
-	MyGame() : Game("Game", Size(800, 600), Color(100, 149, 237), true) {};
+	MyGame() : Application("Application", Vector2(800, 600), Color(100, 149, 237), true) {};
 
 	void Once() override;
 	void Update(double ts) override;

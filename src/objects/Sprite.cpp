@@ -3,6 +3,7 @@
 
 Sprite::Sprite(const char* path, Vector2 position)
 {
+
 	this->path = path;
 	this->position = position;
 
@@ -16,8 +17,7 @@ void Sprite::init(SDL_Renderer* renderer)
 
     if (surface == NULL) {
         SDL_Log("Failed to load image: %s\n", IMG_GetError());
-        /* Return, exit, or whatever to break the flow */
-        // return 0;
+        exit(1);
     }
 
 

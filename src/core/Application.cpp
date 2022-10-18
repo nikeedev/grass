@@ -1,24 +1,23 @@
-#include "Game.h"
+#include "Application.h"
 
-Color Game::black_color(0, 0, 0, 255);
-Color Game::white_color(255, 255, 255, 255);
+Color Application::black_color(0, 0, 0, 255);
+Color Application::white_color(255, 255, 255, 255);
 
-Game::Game(const char* Title, Size ScreenSize, Color background_color, bool debug_mode = false)
+Application::Application(const char* Title, Vector2 ScreenSize, Color background_color, bool debug_mode = false)
 {
 	this->Title = Title;
 	this->ScreenSize = ScreenSize;
 	this->background_color = background_color;
 	this->debug_mode = debug_mode;
-	
+
 	if (SDL_Init(SDL_INIT_EVERYTHING) < 0) {
 		fprintf(stderr, "Error SDL_Init : %s.\n", SDL_GetError());
-			
 	}
 
 	window = SDL_CreateWindow(this->Title,
 		SDL_WINDOWPOS_CENTERED,
 		SDL_WINDOWPOS_CENTERED,
-		ScreenSize.width, ScreenSize.height,
+		ScreenSize.x, ScreenSize.y,
 		0);
 
 	if (!window)
@@ -27,12 +26,10 @@ Game::Game(const char* Title, Size ScreenSize, Color background_color, bool debu
 		std::cout << "SDL2 Error: " << SDL_GetError() << "\n";
 		return;
 	}
-	else if (window && debug_mode)
-	{
-		surface = SDL_GetWindowSurface( window );
-		Log("Window successfully created");
-		Log("Setting up renderer...");
-	}
+
+	Log("Window successfully created");
+	Log("Setting up renderer...");
+	
 
 	renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
 
@@ -42,38 +39,35 @@ Game::Game(const char* Title, Size ScreenSize, Color background_color, bool debu
 		std::cout << "SDL2 Error: " << SDL_GetError() << "\n";
 		return;
 	}
-	else if (renderer && debug_mode)
-	{
-		Log("Renderer successfully created");
-	}
+
+	Log("Renderer successfully created");
+    
 	
 	SDL_version sdl_version;
 	SDL_GetVersion(&sdl_version);
 
-	std::cout << "\nGrass Engine v" << engine_version << " | SDL2 v" << SDL_MAJOR_VERSION << "." << SDL_MINOR_VERSION << "." << SDL_PATCHLEVEL << "\n\n";
+	std::cout << "\nGrass Engine v" << grass_version << ": " << grass_code_name << " | SDL2 v" << SDL_MAJOR_VERSION << "." << SDL_MINOR_VERSION << "." << SDL_PATCHLEVEL << "\n\n";
 }
 
-Game::~Game()
+Application::~Application()
 {
 	SDL_DestroyRenderer(renderer);
-	if (debug_mode)
-		Log("Renderer destroyed");
+	Log("Renderer destroyed");
 	SDL_DestroyWindow(window);
 	window = NULL;
-	if (debug_mode)
-		Log("Window destroyed");
-	SDL_FreeSurface(surface);
+	Log("Window destroyed");
 
 
-	Log("Game successfully finished");
+	Log("Application successfully finished");
 }
 
-void Game::Loop()
+void Application::Loop()
 {
-	isRunning = true;
 
 	Once();
-	
+
+    keyboard_state = SDL_GetKeyboardState(NULL);
+
 	while (isRunning)
 	{
 		while (SDL_PollEvent(&event) > 0)
@@ -96,17 +90,25 @@ void Game::Loop()
 			
 			}
 
-			Input::keyboard_state = SDL_GetKeyboardState(NULL);
+			
 		}
 
 		Update(1.0 / 60.0);
 
 		SDL_RenderClear(renderer);
-		SDL_SetRenderDrawColor(renderer, background_color.r, background_color.g, background_color.b, background_color.a);
 		Draw();	
-		
+        SDL_SetRenderDrawColor(renderer, background_color.r, background_color.g, background_color.b, background_color.a);
+
 		SDL_RenderPresent(renderer);
 	}
 
+}
+
+
+
+bool Application::KeyPressed(SDL_Scancode key)
+{
+    //std::cout << keyboard_state[key] << "\n";
+    return keyboard_state[key];
 }
 

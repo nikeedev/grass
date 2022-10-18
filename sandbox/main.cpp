@@ -4,8 +4,8 @@
 
 int main()
 {
-	MyGame game;
+	MyGame Application;
 
-	game.Loop();
+	Application.Loop();
 }
 

@@ -1,7 +1,7 @@
 #pragma once
 
 #include "../math/Vector2.h"
-#include "../math/Size.h"
+#include "../math/Vector2.h"
 #include "../utils/Color.h"
 #include "SDL2/SDL.h"
 #include "SDL2/SDL_image.h"
@@ -17,11 +17,11 @@ private:
 
  
 
-    SDL_Rect texture_rect;
+    SDL_Rect texture_rect = SDL_Rect();
 
-    SDL_Texture* texture = NULL; 
+    SDL_Texture* texture = nullptr; 
 
-    SDL_Surface* img_surface = NULL;
+    SDL_Surface* img_surface = nullptr;
 
 public:
 
@@ -33,6 +33,6 @@ public:
 
     void draw(SDL_Renderer* renderer);
     
-
+    Sprite(const Sprite&) = delete;
 };
 

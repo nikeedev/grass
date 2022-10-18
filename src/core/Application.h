@@ -1,48 +1,49 @@
 #pragma once
 
-#include "../math/Size.h"
+#include "../math/Vector2.h"
 #include <SDL2/SDL.h>
 #include <iostream>
 #include <memory>
-#include "../math/Size.h"
+#include "../math/Vector2.h"
 #include "../utils/Color.h"
-#include "Input.h"
 #include "../utils/Log.h"
 
 #undef main
 
-constexpr auto engine_version = "0.1.5a";
+constexpr auto grass_version = "0.2.0a";
+constexpr auto grass_code_name = "Seedling";
 
 
-class Game
+class Application
 {
 protected:
 	const char* Title;
 
-	Size ScreenSize;
+	Vector2 ScreenSize;
 
 	Color background_color;
 
 	SDL_Window* window = NULL;
 	SDL_Renderer* renderer = NULL;
-	SDL_Event     event;
-	SDL_Surface* surface = NULL;
-	SDL_Surface* imageSurface = NULL;
+	SDL_Event event;
+
 
 	bool debug_mode;
 
-	bool isRunning;
+	bool isRunning = true;
 
 	// Colors:
 
 	static Color black_color;
 	static Color white_color;
+
 public:
 
 
 
-	Game(const char* Title, Size ScreenSize, Color background_color, bool debug_mode);
-	~Game();
+	Application(const char* Title, Vector2 ScreenSize, Color background_color, bool debug_mode);
+    Application(const Application&) = delete;
+	~Application();
 
 	void Loop();
 
@@ -53,6 +54,11 @@ protected:
 	virtual void Once() = 0;
 	virtual void Update(double ts) = 0;
 	virtual void Draw() = 0;
+
+
+    const Uint8* keyboard_state = NULL;
+
+    bool KeyPressed(SDL_Scancode key);
 	
 
 };

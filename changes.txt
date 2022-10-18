@@ -1,3 +1,0 @@
-2022:
-  0.1.4a:
-    Added support for sprite and image rendering/drawing.
