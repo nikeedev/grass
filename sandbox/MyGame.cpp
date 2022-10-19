@@ -47,6 +47,18 @@ void MyGame::Update(double ts)
         circle.position.x -= speed * ts;
 
 
+    if (this->KeyPressed(SDL_SCANCODE_W))
+		circle2.position.y -= speed * ts;
+
+    if (this->KeyPressed(SDL_SCANCODE_S))
+        circle2.position.y += speed * ts;
+
+    if (this->KeyPressed(SDL_SCANCODE_D))
+        circle2.position.x += speed * ts;
+
+    if (this->KeyPressed(SDL_SCANCODE_A))
+        circle2.position.x -= speed * ts;
+
     //std::cout << this->KeyPressed(SDL_SCANCODE_UP) << std::endl;
 
     //std::cout << background_color.r << ", " << background_color.g << ", " << background_color.b << "\n";
