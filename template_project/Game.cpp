@@ -1,5 +1,5 @@
 #include <iostream>
-#include "MyGame.h"
+#include "Game.h"
 
 // Box box(Vector2(0, 0), Vector2(20, 20), Color(124, 34, 11));
 
@@ -13,7 +13,7 @@ int speed = 20;
 /**
 	The code will be ran once, before running the update and draw loop
 */
-void MyGame::Once()
+void Game::Once()
 {
 	circle.init(renderer);
 	circle2.init(renderer);
@@ -23,7 +23,7 @@ void MyGame::Once()
 /**
 	Don't have rendering code inside of it, cause it won't clear and draw as intended
 */
-void MyGame::Update(double ts)
+void Game::Update(double ts)
 {
 	/*
 	box.size.width += speed * ts;
@@ -68,7 +68,7 @@ void MyGame::Update(double ts)
 /**
 * Draws everything by clearing the screen, then draws the background color and the code inside this method.
 */
-void MyGame::Draw()
+void Game::Draw()
 {
 	
 	circle.draw(renderer);
