@@ -1,23 +1,13 @@
 #include <iostream>
 #include "Game.h"
 
-// Box box(Vector2(0, 0), Vector2(20, 20), Color(124, 34, 11));
-
-Sprite circle("./assets/textures/Black_Circle.png", Vector2(600, 550));
-
-Sprite circle2("./assets/textures/Black_Circle.png", Vector2(428, 428));
-
-
-int speed = 20;
 
 /**
 	The code will be ran once, before running the update and draw loop
 */
 void Game::Once()
 {
-	circle.init(renderer);
-	circle2.init(renderer);
-    // box.Draw(renderer);
+
 }
 
 /**
@@ -25,43 +15,7 @@ void Game::Once()
 */
 void Game::Update(double ts)
 {
-	/*
-	box.size.width += speed * ts;
-	box.size.height += speed * ts;
-
-	box.position.x += speed * ts;
-	box.position.y += speed * ts;
-	*/
-
-    
-	if (this->KeyPressed(SDL_SCANCODE_UP))
-		circle.position.y -= speed * ts;
-
-    if (this->KeyPressed(SDL_SCANCODE_DOWN))
-        circle.position.y += speed * ts;
-
-    if (this->KeyPressed(SDL_SCANCODE_RIGHT))
-        circle.position.x += speed * ts;
-
-    if (this->KeyPressed(SDL_SCANCODE_LEFT))
-        circle.position.x -= speed * ts;
-
-
-    if (this->KeyPressed(SDL_SCANCODE_W))
-		circle2.position.y -= speed * ts;
-
-    if (this->KeyPressed(SDL_SCANCODE_S))
-        circle2.position.y += speed * ts;
-
-    if (this->KeyPressed(SDL_SCANCODE_D))
-        circle2.position.x += speed * ts;
-
-    if (this->KeyPressed(SDL_SCANCODE_A))
-        circle2.position.x -= speed * ts;
-
-    //std::cout << this->KeyPressed(SDL_SCANCODE_UP) << std::endl;
-
-    //std::cout << background_color.r << ", " << background_color.g << ", " << background_color.b << "\n";
+	
 }
 
 
@@ -70,8 +24,5 @@ void Game::Update(double ts)
 */
 void Game::Draw()
 {
-	
-	circle.draw(renderer);
-	circle2.draw(renderer);
-    // box.Draw(renderer);
+
 }
