@@ -1,2 +1,0 @@
-C:\dev\C++\grass\build\vc\grass.exe
-C:\dev\grass\build\vc\grass.exe
