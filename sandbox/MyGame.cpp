@@ -1,7 +1,7 @@
 #include <iostream>
 #include "MyGame.h"
 
-Box box(Vector2(128, 128), Vector2(20, 20), Color(124, 34, 11));
+// Box box(Vector2(0, 0), Vector2(20, 20), Color(124, 34, 11));
 
 Sprite circle("./assets/textures/Black_Circle.png", Vector2(128, 128));
 
@@ -17,7 +17,7 @@ void MyGame::Once()
 {
 	circle.init(renderer);
 	circle2.init(renderer);
-    box.Draw(renderer);
+    // box.Draw(renderer);
 }
 
 /**
@@ -26,8 +26,8 @@ void MyGame::Once()
 void MyGame::Update(double ts)
 {
 	/*
-	box.Vector2.width += speed * ts;
-	box.Vector2.height += speed * ts;
+	box.size.width += speed * ts;
+	box.size.height += speed * ts;
 
 	box.position.x += speed * ts;
 	box.position.y += speed * ts;
@@ -73,5 +73,5 @@ void MyGame::Draw()
 	
 	circle.draw(renderer);
 	circle2.draw(renderer);
-    box.Draw(renderer);
+    // box.Draw(renderer);
 }
