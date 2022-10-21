@@ -5,7 +5,7 @@ It is based on C++ and SDL library, where the engine can run great on 2D games a
 
 <br>
 
-Q: Why i build the engine?
+Q: Why do i build a engine?
 
 A: I'm a young but very passionate game developer. I'm learning game development and programming languages, which i together combined, so i can build games while learning the language too.  
 
