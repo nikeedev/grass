@@ -1,6 +1,6 @@
 mingw32-make
 
-cd build 
+cd build/mingw 
 
 ./game.exe
 

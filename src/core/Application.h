@@ -10,8 +10,6 @@
 
 #undef main
 
-constexpr auto grass_version = "0.2.0a";
-constexpr auto grass_code_name = "Seedling";
 
 
 class Application

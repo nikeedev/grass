@@ -3,9 +3,9 @@
 
 Box box(Vector2(128, 128), Vector2(20, 20), Color(124, 34, 11));
 
-Sprite circle("./assets/textures/Black_Circle.png", Vector2(128, 128));
+Sprite circle("../../assets/textures/Black_Circle.png", Vector2(128, 128));
 
-Sprite circle2("./assets/textures/Black_Circle.png", Vector2(428, 428));
+Sprite circle2("../../assets/textures/Black_Circle.png", Vector2(428, 428));
 
 
 int speed = 200;
@@ -34,8 +34,8 @@ void MyGame::Update(double ts)
 	*/
 
     
-	if (this->KeyPressed(SDL_SCANCODE_UP))
-		circle.position.y -= speed * ts;
+    if (this->KeyPressed(SDL_SCANCODE_UP))
+  	circle.position.y -= speed * ts;
 
     if (this->KeyPressed(SDL_SCANCODE_DOWN))
         circle.position.y += speed * ts;
@@ -56,10 +56,11 @@ void MyGame::Update(double ts)
 /**
 * Draws everything by clearing the screen, then draws the background color and the code inside this method.
 */
+
 void MyGame::Draw()
 {
 	
-	circle.draw(renderer);
-	circle2.draw(renderer);
+    circle.draw(renderer);
+    circle2.draw(renderer);
     box.Draw(renderer);
 }
