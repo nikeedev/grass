@@ -1,11 +1,11 @@
 ## Grass, a WIP game engine.
 
-Grass, is a WIP game engine, begun building on 2022, made by me @nikeedev :)
+Grass, is a WIP game engine, that i begun building in July 2022, made by me @nikeedev :)
 It is based on C++ and SDL library, where the engine can run great on 2D games and applications.
 
 <br>
 
-Q: Why i build the engine?
+Q: Why do i build a engine?
 
 A: I'm a young but very passionate game developer. I'm learning game development and programming languages, which i together combined, so i can build games while learning the language too.  
 
