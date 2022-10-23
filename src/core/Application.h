@@ -7,6 +7,7 @@
 #include "../math/Vector2.h"
 #include "../utils/Color.h"
 #include "../utils/Log.h"
+#include "../utils/funcs.h"
 
 #undef main
 

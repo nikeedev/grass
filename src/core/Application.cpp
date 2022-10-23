@@ -59,9 +59,10 @@ Application::~Application()
 void Application::Loop()
 {
    
-    float fps = 0.0f;
-    Uint32 prev_ticks = SDL_GetTicks();
-
+    double fps = 0.0f;
+    double prev_ticks = SDL_GetTicks();
+    double ticks_now;
+    double deltaTime;
 
 	Once();
 
@@ -92,12 +93,13 @@ void Application::Loop()
 			
 		}
 
-        Uint32 ticks_now = SDL_GetTicks();
-        Uint32 diff = ticks_now - prev_ticks;
-        prev_ticks = ticks_now;
-        fps = 1000 / diff;
+        ticks_now = SDL_GetTicks();
+        deltaTime = ticks_now - prev_ticks;
+        deltaTime = 
+        prev_ticks = SDL_GetTicks();
+        fps = 1000 / deltaTime;
 
-		Update(fps);
+		Update(deltaTime);
 
 		SDL_RenderClear(renderer);
 		Draw();	

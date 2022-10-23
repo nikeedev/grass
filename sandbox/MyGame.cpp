@@ -8,7 +8,7 @@ Sprite circle("../../assets/textures/Black_Circle.png", Vector2(128, 128));
 Sprite circle2("../../assets/textures/Black_Circle.png", Vector2(428, 428));
 
 
-int speed = 20;
+int speed = 2;
 
 /**
 	The code will be ran once, before running the update and draw loop
@@ -23,41 +23,41 @@ void MyGame::Once()
 /**
 	Don't have rendering code inside of it, cause it won't clear and draw as intended
 */
-void MyGame::Update(double ts)
-{
+void MyGame::Update(double dt)
+{  
 	/*
-	box.size.width += speed * ts;
-	box.size.height += speed * ts;
+	box.size.width += speed * dt;
+	box.size.height += speed * dt;
 
-	box.position.x += speed * ts;
-	box.position.y += speed * ts;
+	box.position.x += speed * dt;
+	box.position.y += speed * dt;
 	*/
-
+    std::cout << dt << "\n";
     
     if (this->KeyPressed(SDL_SCANCODE_UP))
-  	circle.position.y -= speed * ts;
+  	circle.position.y -= speed * dt;
 
     if (this->KeyPressed(SDL_SCANCODE_DOWN))
-        circle.position.y += speed * ts;
+        circle.position.y += speed * dt;
 
     if (this->KeyPressed(SDL_SCANCODE_RIGHT))
-        circle.position.x += speed * ts;
+        circle.position.x += speed * dt;
 
     if (this->KeyPressed(SDL_SCANCODE_LEFT))
-        circle.position.x -= speed * ts;
+        circle.position.x -= speed * dt;
 
 
     if (this->KeyPressed(SDL_SCANCODE_W))
-		circle2.position.y -= speed * ts;
+		circle2.position.y -= speed * dt;
 
     if (this->KeyPressed(SDL_SCANCODE_S))
-        circle2.position.y += speed * ts;
+        circle2.position.y += speed * dt;
 
     if (this->KeyPressed(SDL_SCANCODE_D))
-        circle2.position.x += speed * ts;
+        circle2.position.x += speed * dt;
 
     if (this->KeyPressed(SDL_SCANCODE_A))
-        circle2.position.x -= speed * ts;
+        circle2.position.x -= speed * dt;
 
     //std::cout << this->KeyPressed(SDL_SCANCODE_UP) << std::endl;
 
