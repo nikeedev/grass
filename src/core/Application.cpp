@@ -95,14 +95,14 @@ void Application::Loop()
 
         ticks_now = SDL_GetTicks();
         deltaTime = ticks_now - prev_ticks;
-        deltaTime = 
-        prev_ticks = SDL_GetTicks();
-        fps = 1000 / deltaTime;
+        fps = (1000 / deltaTime);
+       
+	    prev_ticks = SDL_GetTicks();
 
 		Update(deltaTime);
 
 		SDL_RenderClear(renderer);
-		Draw();	
+		Draw();
         SDL_SetRenderDrawColor(renderer, background_color.r, background_color.g, background_color.b, background_color.a);
 
 		SDL_RenderPresent(renderer);
