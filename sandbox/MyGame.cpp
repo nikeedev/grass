@@ -8,7 +8,7 @@ Sprite circle("../../assets/textures/Black_Circle.png", Vector2(128, 128));
 Sprite circle2("../../assets/textures/Black_Circle.png", Vector2(428, 428));
 
 
-int speed = 2;
+double speed = 250;
 
 /**
 	The code will be ran once, before running the update and draw loop
