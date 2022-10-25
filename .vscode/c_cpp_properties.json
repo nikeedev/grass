@@ -12,7 +12,6 @@
                 "UNICODE",
                 "_UNICODE"
             ],
-            "compilerPath": "C:\\Users\\nikgon07\\AppData\\Local\\Programs\\mingw64\\bin\\g++.exe",
             "cppStandard": "c++20",
             "intelliSenseMode": "windows-gcc-x64",
             "configurationProvider": "ms-vscode.makefile-tools"
