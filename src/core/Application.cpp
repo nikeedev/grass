@@ -99,7 +99,7 @@ void Application::Loop()
        
 	    prev_ticks = SDL_GetTicks();
 
-		Update(deltaTime);
+		Update(deltaTime/1000);
 
 		SDL_RenderClear(renderer);
 		Draw();
