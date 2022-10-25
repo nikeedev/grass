@@ -1,7 +1,7 @@
-#include "Sprite.h"
+#include "sprite.h"
 
 
-Sprite::Sprite(const char* path, Vector2 position)
+Sprite::Sprite(const char* path, vec2 position)
 {
 
 	this->path = path;

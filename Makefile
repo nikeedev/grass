@@ -1,4 +1,6 @@
-ENGINE_FILES :=	src/core/Application.cpp src/math/Vector2.cpp src/objects/Box.cpp src/objects/Sprite.cpp src/utils/Color.cpp src/utils/Log.cpp
+ENGINE_FILES := src/*.cpp
+
+# src/core/app.cpp src/math/vec2.cpp src/objects/box.cpp src/objects/sprite.cpp src/utils/color.cpp src/utils/log.cpp
 
 SANDBOX_FILES := sandbox/main.cpp sandbox/MyGame.cpp
 

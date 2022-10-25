@@ -1,8 +1,7 @@
 #pragma once
 
-#include "../math/Vector2.h"
-#include "../math/Vector2.h"
-#include "../utils/Color.h"
+#include "../stuff/vec2.h"
+#include "../stuff/color.h"
 #include "SDL2/SDL.h"
 #include "SDL2/SDL_image.h"
 
@@ -11,7 +10,7 @@ class Sprite {
 public:
 
     const char* path;
-    Vector2 position;
+    vec2 position;
 
 private:
 
@@ -25,7 +24,7 @@ private:
 
 public:
 
-    Sprite(const char* path, Vector2 position);
+    Sprite(const char* path, vec2 position);
     
     ~Sprite();
 

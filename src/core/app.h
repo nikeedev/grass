@@ -1,13 +1,12 @@
 #pragma once
 
-#include "../math/Vector2.h"
 #include <SDL2/SDL.h>
 #include <iostream>
 #include <memory>
-#include "../math/Vector2.h"
-#include "../utils/Color.h"
-#include "../utils/Log.h"
-#include "../utils/funcs.h"
+#include "../stuff/color.h"
+#include "../stuff/log.h"
+#include "../stuff/funcs.h"
+#include "../stuff/vec2.h"
 
 #undef main
 
@@ -18,7 +17,7 @@ class Application
 protected:
 	const char* Title;
 
-	Vector2 ScreenSize;
+	vec2 ScreenSize;
 
 	Color background_color;
 
@@ -40,7 +39,7 @@ public:
 
 
 
-	Application(const char* Title, Vector2 ScreenSize, Color background_color, bool debug_mode);
+	Application(const char* Title, vec2 ScreenSize, Color background_color, bool debug_mode);
     Application(const Application&) = delete;
 	~Application();
 

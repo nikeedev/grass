@@ -1,4 +1,4 @@
-#include "Log.h"
+#include "log.h"
 #include <iostream>
 
 void Log(const char* message, int level)

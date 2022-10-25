@@ -1,4 +1,4 @@
-#include "Color.h"
+#include "color.h"
 #include "SDL2/SDL.h"
 
 Color::Color()

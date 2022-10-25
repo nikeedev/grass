@@ -1,4 +1,4 @@
-#include "Grass.h"
+#include "grass.h"
 
 SDL_version sdl_version;
 SDL_GetVersion(&sdl_version);

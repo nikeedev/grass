@@ -1,11 +1,11 @@
 #pragma once
 
-#include "math/Vector2.h"
-#include "objects/Box.h"
-#include "objects/Sprite.h"
-#include "core/Application.h"
-#include "utils/Color.h"
-#include "utils/funcs.h"
+#include "stuff/vec2.h"
+#include "objects/box.h"
+#include "objects/sprite.h"
+#include "core/app.h"
+#include "stuff/color.h"
+#include "stuff/funcs.h"
 #include <SDL2/SDL.h>
 #include <iostream>
 

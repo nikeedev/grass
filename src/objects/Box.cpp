@@ -1,4 +1,4 @@
-#include "Box.h"
+#include "box.h"
 
 
 Box::Box(Vector2 position, Vector2 size, Color color = Color(0, 0, 0, 255))

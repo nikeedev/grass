@@ -1,15 +1,14 @@
 #pragma once
 
-#include "../math/Vector2.h"
-#include "../math/Vector2.h"
-#include "../utils/Color.h"
+#include "../stuff/vec2.h"
+#include "../stuff/color.h"
 #include "SDL2/SDL.h"
 
 class Box {
 
 public:
-    Vector2 position;
-    Vector2 size;
+    vec2 position;
+    vec2 size;
     Color color;
 
 protected:
@@ -18,7 +17,7 @@ protected:
 
 public:
 
-    Box(Vector2 position, Vector2 size, Color color);
+    Box(vec2 position, vec2 size, Color color);
     
     ~Box();
 

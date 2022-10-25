@@ -1,9 +1,9 @@
-#include "Application.h"
+#include "app.h"
 
 Color Application::black_color(0, 0, 0, 255);
 Color Application::white_color(255, 255, 255, 255);
 
-Application::Application(const char* Title, Vector2 ScreenSize, Color background_color, bool debug_mode = false)
+Application::Application(const char* Title, vec2 ScreenSize, Color background_color, bool debug_mode = false)
 {
 	this->Title = Title;
 	this->ScreenSize = ScreenSize;
