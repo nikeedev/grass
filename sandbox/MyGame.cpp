@@ -32,7 +32,8 @@ void MyGame::Update(double dt)
 	box.position.x += speed * dt;
 	box.position.y += speed * dt;
 	*/
-    std::cout << dt << "\n";
+
+    // std::cout << dt << "\n";
     
     if (this->KeyPressed(SDL_SCANCODE_UP))
   	circle.position.y -= speed * dt;

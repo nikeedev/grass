@@ -14,7 +14,10 @@
             ],
             "cppStandard": "c++20",
             "intelliSenseMode": "windows-gcc-x64",
-            "configurationProvider": "ms-vscode.makefile-tools"
+            "configurationProvider": "ms-vscode.makefile-tools",
+            "browse": {
+                "databaseFilename": "${workspaceFolder}/.vscode/BROWSE.VC.DB"
+            }
         }
     ],
     "version": 4

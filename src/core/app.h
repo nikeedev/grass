@@ -1,14 +1,18 @@
 #pragma once
 
-#include <SDL2/SDL.h>
 #include <iostream>
 #include <memory>
+#include <SDL2/SDL.h>
+
 #include "../stuff/color.h"
 #include "../stuff/log.h"
 #include "../stuff/funcs.h"
 #include "../stuff/vec2.h"
 
 #undef main
+
+#define grass_version "0.2.1a"
+#define grass_code_name "Seedling"
 
 
 

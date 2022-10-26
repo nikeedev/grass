@@ -5,7 +5,14 @@ Color Application::white_color(255, 255, 255, 255);
 
 Application::Application(const char* Title, vec2 ScreenSize, Color background_color, bool debug_mode = false)
 {
-	this->Title = Title;
+    
+    SDL_version sdl_version;
+    SDL_GetVersion(&sdl_version);
+
+    std::cout << "\nGrass Engine v" << grass_version << ": " << grass_code_name << " | SDL2 v" << SDL_MAJOR_VERSION << "." << SDL_MINOR_VERSION << "." << SDL_PATCHLEVEL << "\n\n";
+	
+    
+    this->Title = Title;
 	this->ScreenSize = ScreenSize;
 	this->background_color = background_color;
 	this->debug_mode = debug_mode;
@@ -13,6 +20,10 @@ Application::Application(const char* Title, vec2 ScreenSize, Color background_co
 	if (SDL_Init(SDL_INIT_EVERYTHING) < 0) {
 		fprintf(stderr, "Error SDL_Init : %s.\n", SDL_GetError());
 	}
+
+    if (TTF_Init() < 0) {
+	    fprintf(stderr, "Error TTF_Init : %s.\n", TTF_GetError());
+    }
 
 	window = SDL_CreateWindow(this->Title,
 		SDL_WINDOWPOS_CENTERED,

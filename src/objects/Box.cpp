@@ -1,7 +1,7 @@
 #include "box.h"
 
 
-Box::Box(Vector2 position, Vector2 size, Color color = Color(0, 0, 0, 255))
+Box::Box(vec2 position, vec2 size, Color color = Color(0, 0, 0, 255))
 {
 	this->position = position;
 	this->size = size;
