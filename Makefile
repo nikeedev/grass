@@ -1,7 +1,5 @@
 ENGINE_FILES := src/core/app.cpp src/objects/*.cpp src/stuff/*.cpp src/ui/*.cpp
 
-
-
 SANDBOX_FILES := sandbox/main.cpp sandbox/MyGame.cpp
 
 CC_FLAGS := -Wall -std=c++20
