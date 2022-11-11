@@ -11,7 +11,7 @@ A: I'm a young but very passionate game developer. I'm learning game development
 
 I found C++ very interesting language, so i got on, and worked with it. 
 I learn SDL2 on the way so i can also make some games, but really, i like to make game engines. 
-Thats first time i build a game engine completely using C++ and a media library, but also i do it alone, that way, i can choose how the enigne would be and decide what it should be based on. Grass engine, is a example of that, therefore i build it.
+That's first time i build a game engine completely using C++ and a media library, but also i do it alone, that way, i can choose how the engine would be and decide what it should be based on. Grass engine, is a example of that, therefore i build it.
 
 
  
