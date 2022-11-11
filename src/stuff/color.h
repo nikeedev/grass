@@ -9,9 +9,8 @@ public:
 public:
 	Color();
 
-	Color(Uint8 r, Uint8 g, Uint8 b, Uint8 a);
+	Color(Uint8 r, Uint8 g, Uint8 b, Uint8 a = 255);
 	
-	Color(Uint8 r, Uint8 g, Uint8 b);
 
 	~Color();
 };

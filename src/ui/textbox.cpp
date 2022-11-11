@@ -1,20 +1,19 @@
-#include "text.h"
+#include "textbox.h"
 
-Textbox::TextBox(const& char* text, vec2 size, vec2 pos, Color* color(255, 255, 255, 255))
+Textbox::Textbox(const char* text, vec2 size, vec2 pos, Color& color)
 {
     this->text = text;
     this->size = size;
     this->pos = pos;
     this->color = color;
 
-
 }
 
 
-TextBox::TextBox()
+Textbox::~Textbox()
 {}
 
-void TextBox::draw(SDL_Renderer* renderer)
+void Textbox::draw(SDL_Renderer* renderer)
 {
     
 }

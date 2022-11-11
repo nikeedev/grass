@@ -20,6 +20,10 @@ code {
      Returns: Either `true` or `false` depending on pressed keys.
     - Fixed issue with SDL_Surface and sprite code, which crashed the game after close of the game.
     
-    - Deleted away `Size` class, replaced with `Vector2`
+    - Deleted `Size` class, replacement: `Vector2`
     
     - Updated SDL -  2. 2.24.0
+  - 0.2.1a: 
+    - Grass is now a library, so it could be referenced now by a C++ project.
+    - Fixed some stuff with Color.
+    - Added `Textbox` and `Button` classes. Will be added more functionality to them in next update. 

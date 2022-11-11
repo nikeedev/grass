@@ -3,6 +3,7 @@
 #include <iostream>
 #include <memory>
 #include <SDL2/SDL.h>
+#include <SDL2/SDL_ttf.h>
 
 #include "../stuff/color.h"
 #include "../stuff/log.h"

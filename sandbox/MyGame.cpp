@@ -3,9 +3,9 @@
 
 // Box box(Vector2(0, 0), Vector2(20, 20), Color(124, 34, 11));
 
-Sprite circle("../../assets/textures/Black_Circle.png", vec2(128, 128));
+Sprite circle("../assets/textures/Black_Circle.png", vec2(128, 128));
 
-Sprite circle2("../../assets/textures/Black_Circle.png", vec2(428, 428));
+Sprite circle2("../assets/textures/Black_Circle.png", vec2(428, 428));
 
 
 double speed = 250;

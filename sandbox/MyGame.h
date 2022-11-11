@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../src/grass.h"
+#include <grass.h>
 
 
 class MyGame : public Application
