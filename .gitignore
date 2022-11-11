@@ -1,4 +1,4 @@
-build/*/*.exe
+/bin
 
 /.vs
 dependencies/
