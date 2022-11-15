@@ -9,14 +9,13 @@
 class Textbox 
 {
 
-private:
+public:
     const char* text;
 
-public:
-    
     vec2 size, pos;
     Color color;
 
+    Textbox();
     Textbox(const char* text, vec2 size, vec2 pos, Color& color); 
 
     ~Textbox();
