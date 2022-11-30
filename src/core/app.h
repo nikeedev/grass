@@ -6,7 +6,7 @@
 #include <SDL2/SDL_ttf.h>
 
 #include "../stuff/color.h"
-#include "../stuff/log.h"
+#include "../stuff/log.hpp"
 #include "../stuff/funcs.h"
 #include "../stuff/vec2.h"
 

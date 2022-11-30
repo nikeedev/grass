@@ -4,7 +4,7 @@
 #include <SDL2/SDL_ttf.h>
 #include "../stuff/vec2.h"
 #include "../stuff/color.h"
-#include "textbox.h"
+#include "./textbox.h"
 
 class Button
 {
@@ -18,7 +18,10 @@ public:
  
 
     Button();
-    Button(const char* text, vec2 size, vec2 pos);
+   
+    
+    Button(const char* text, vec2 pos, vec2 size);
+    
 
     ~Button();
 

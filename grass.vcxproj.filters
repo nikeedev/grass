@@ -52,9 +52,6 @@
     <ClCompile Include="src\stuff\funcs.cpp">
       <Filter>src\stuff</Filter>
     </ClCompile>
-    <ClCompile Include="src\stuff\log.cpp">
-      <Filter>src\stuff</Filter>
-    </ClCompile>
     <ClCompile Include="src\stuff\vec2.cpp">
       <Filter>src\stuff</Filter>
     </ClCompile>
@@ -84,7 +81,7 @@
     <ClInclude Include="src\stuff\funcs.h">
       <Filter>src\stuff</Filter>
     </ClInclude>
-    <ClInclude Include="src\stuff\log.h">
+    <ClInclude Include="src\stuff\log.hpp">
       <Filter>src\stuff</Filter>
     </ClInclude>
     <ClInclude Include="src\stuff\vec2.h">
