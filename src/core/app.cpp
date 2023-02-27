@@ -3,7 +3,7 @@
 Color Application::black_color(0, 0, 0, 255);
 Color Application::white_color(255, 255, 255, 255);
 
-Application::Application(const char* Title, vec2 ScreenSize, Scene scenes[], size_t scene_num, bool debug_mode) : Title(Title), ScreenSize(ScreenSize)
+Application::Application(const char* Title, vec2 ScreenSize, Scene* scenes, bool debug_mode) : Title(Title), ScreenSize(ScreenSize)
 {
 
     SDL_version sdl_version;
@@ -28,25 +28,25 @@ Application::Application(const char* Title, vec2 ScreenSize, Scene scenes[], siz
 
     if (!window)
     {
-        Log("Failed to create window\n", 3);
+        std::cout << "Grass Error:  Failed to create window\n" << std::endl;
         std::cout << "SDL2 Error: " << SDL_GetError() << "\n";
         return;
     }
 
-    Log("Window successfully created");
-    Log("Setting up renderer...");
+    std::cout << "Window successfully created" << std::endl;
+    std::cout << "Setting up renderer..." << std::endl;
 
 
     renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
 
     if (!renderer)
     {
-        Log("Failed to get window's surface\n");
+        std::cout << "Grass Error: Failed to get window's surface\n" << std::endl;
         std::cout << "SDL2 Error: " << SDL_GetError() << "\n";
         return;
     }
 
-    Log("Renderer successfully created");
+    std::cout << "Renderer successfully created" << std::endl;
 
 }
 
@@ -76,38 +76,39 @@ Application::Application(const char* Title, vec2 ScreenSize, Color background_co
 
 	if (!window)
 	{
-		Log("Failed to create window\n", 3);
+		std::cout << "Grass Error: Failed to create window\n" << std::endl;
 		std::cout << "SDL2 Error: " << SDL_GetError() << "\n";
 		return;
 	}
 
-	Log("Window successfully created");
-	Log("Setting up renderer...");
+	std::cout << "Window successfully created" << std::endl;
+	std::cout << "Setting up renderer..." << std::endl;
 	
 
 	renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
 
 	if (!renderer)
 	{
-		Log("Failed to get window's surface\n");
+		std::cout << "Grass Error: Failed to get window's surface\n" << std::endl;
 		std::cout << "SDL2 Error: " << SDL_GetError() << "\n";
 		return;
 	}
 
-	Log("Renderer successfully created");
+	std::cout << "Renderer successfully created" << std::endl;
     
 }
+
 
 Application::~Application()
 {
 	SDL_DestroyRenderer(renderer);
-	Log("Renderer destroyed");
+    std::cout << "Renderer destroyed" << std::endl;
 	SDL_DestroyWindow(window);
 	window = NULL;
-	Log("Window destroyed");
+	std::cout << "Window destroyed" << std::endl;
 
 
-	Log("Application successfully finished");
+	std::cout << "Application successfully finished" << std::endl;
 }
 
 void Application::Loop()
@@ -118,7 +119,10 @@ void Application::Loop()
     double ticks_now;
     double deltaTime;
 
-	Once();
+    /*for (Scene scene : scenes) {
+	    scene.Once();
+
+    }*/
 
     keyboard_state = SDL_GetKeyboardState(NULL);
 

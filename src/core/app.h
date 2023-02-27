@@ -7,17 +7,14 @@
 
 #include "Scene.h"
 #include "../stuff/color.h"
-#include "../stuff/log.hpp"
 #include "../stuff/funcs.h"
 #include "../stuff/vec2.h"
-
 
 
 #undef main
 
 #define grass_version "0.2.2a"
-#define grass_code_name "Seedling"
-
+#define grass_code_name "Dev"
 
 
 class Application
@@ -38,7 +35,7 @@ protected:
 
 	bool isRunning = true;
 
-    // Scene scenes[] = {};
+    // Scene scenes[5] = { Scene{} };
 
 	// Colors:
 
@@ -50,7 +47,7 @@ public:
 
 
 	Application(const char* Title, vec2 ScreenSize, Color background_color, bool debug_mode);
-    Application(const char* Title, vec2 ScreenSize, Scene scenes[], size_t scene_num, bool debug_mode);
+    Application(const char* Title, vec2 ScreenSize, Scene* scenes, bool debug_mode);
 
     Application(const Application&) = delete;
 	~Application();
@@ -61,10 +58,11 @@ public:
 protected:
 
 	
-	virtual void Once() = 0;
-	virtual void Update(double ts) = 0;
-	virtual void Draw() = 0;
+    virtual void Run() = 0;
 
+    virtual void Once() = 0;
+    virtual void Update(double ts) = 0;
+    virtual void Draw() = 0;
 
     const Uint8* keyboard_state = NULL;
 

@@ -84,9 +84,6 @@
     <ClInclude Include="src\stuff\funcs.h">
       <Filter>src\stuff</Filter>
     </ClInclude>
-    <ClInclude Include="src\stuff\log.hpp">
-      <Filter>src\stuff</Filter>
-    </ClInclude>
     <ClInclude Include="src\stuff\vec2.h">
       <Filter>src\stuff</Filter>
     </ClInclude>
