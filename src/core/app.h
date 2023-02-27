@@ -5,14 +5,17 @@
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_ttf.h>
 
+#include "Scene.h"
 #include "../stuff/color.h"
 #include "../stuff/log.hpp"
 #include "../stuff/funcs.h"
 #include "../stuff/vec2.h"
 
+
+
 #undef main
 
-#define grass_version "0.2.1a"
+#define grass_version "0.2.2a"
 #define grass_code_name "Seedling"
 
 
@@ -35,6 +38,8 @@ protected:
 
 	bool isRunning = true;
 
+    // Scene scenes[] = {};
+
 	// Colors:
 
 	static Color black_color;
@@ -45,6 +50,8 @@ public:
 
 
 	Application(const char* Title, vec2 ScreenSize, Color background_color, bool debug_mode);
+    Application(const char* Title, vec2 ScreenSize, Scene scenes[], size_t scene_num, bool debug_mode);
+
     Application(const Application&) = delete;
 	~Application();
 

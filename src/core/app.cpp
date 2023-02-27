@@ -3,19 +3,62 @@
 Color Application::black_color(0, 0, 0, 255);
 Color Application::white_color(255, 255, 255, 255);
 
-Application::Application(const char* Title, vec2 ScreenSize, Color background_color, bool debug_mode = false)
+Application::Application(const char* Title, vec2 ScreenSize, Scene scenes[], size_t scene_num, bool debug_mode) : Title(Title), ScreenSize(ScreenSize)
+{
+
+    SDL_version sdl_version;
+    SDL_GetVersion(&sdl_version);
+
+    std::cout << "\nGrass Engine v" << grass_version << ": " << grass_code_name << " | SDL v" << SDL_MAJOR_VERSION << "." << SDL_MINOR_VERSION << "." << SDL_PATCHLEVEL << "\n\n";
+
+
+    if (SDL_Init(SDL_INIT_EVERYTHING) < 0) {
+        fprintf(stderr, "Error SDL_Init : %s.\n", SDL_GetError());
+    }
+
+    if (TTF_Init() < 0) {
+        fprintf(stderr, "Error TTF_Init : %s.\n", TTF_GetError());
+    }
+
+    window = SDL_CreateWindow(this->Title,
+        SDL_WINDOWPOS_CENTERED,
+        SDL_WINDOWPOS_CENTERED,
+        ScreenSize.x, ScreenSize.y,
+        0);
+
+    if (!window)
+    {
+        Log("Failed to create window\n", 3);
+        std::cout << "SDL2 Error: " << SDL_GetError() << "\n";
+        return;
+    }
+
+    Log("Window successfully created");
+    Log("Setting up renderer...");
+
+
+    renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
+
+    if (!renderer)
+    {
+        Log("Failed to get window's surface\n");
+        std::cout << "SDL2 Error: " << SDL_GetError() << "\n";
+        return;
+    }
+
+    Log("Renderer successfully created");
+
+}
+
+
+Application::Application(const char* Title, vec2 ScreenSize, Color background_color, bool debug_mode = false) : Title(Title), ScreenSize(ScreenSize), background_color(background_color), debug_mode(debug_mode)
 {
     
     SDL_version sdl_version;
     SDL_GetVersion(&sdl_version);
 
-    std::cout << "\nGrass Engine v" << grass_version << ": " << grass_code_name << " | SDL2 v" << SDL_MAJOR_VERSION << "." << SDL_MINOR_VERSION << "." << SDL_PATCHLEVEL << "\n\n";
-	
-    
-    this->Title = Title;
-	this->ScreenSize = ScreenSize;
-	this->background_color = background_color;
-	this->debug_mode = debug_mode;
+    std::cout << "\nGrass Engine v" << grass_version << ": " << grass_code_name << " | SDL v" << SDL_MAJOR_VERSION << "." << SDL_MINOR_VERSION << "." << SDL_PATCHLEVEL << "\n\n";
+
 
 	if (SDL_Init(SDL_INIT_EVERYTHING) < 0) {
 		fprintf(stderr, "Error SDL_Init : %s.\n", SDL_GetError());

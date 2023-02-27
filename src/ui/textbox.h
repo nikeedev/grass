@@ -6,17 +6,17 @@
 #include "../stuff/color.h"
 
 
-class Textbox 
+class Textbox
 {
 
 public:
-    char* text;
+    const char* text;
 
     vec2 size, pos;
     Color color;
 
     Textbox();
-    Textbox(const char* const text, vec2 pos, vec2 size, Color& color);
+    Textbox(const char* text, vec2 pos, vec2 size, const Color& color = Color(0, 0, 0));
 
     ~Textbox();
 

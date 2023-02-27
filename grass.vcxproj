@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\core\scene.cpp" />
     <ClCompile Include="src\core\app.cpp" />
     <ClCompile Include="src\grass.cpp" />
     <ClCompile Include="src\objects\Box.cpp" />
@@ -30,6 +31,7 @@
     <ClCompile Include="src\ui\textbox.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\core\scene.h" />
     <ClInclude Include="src\core\app.h" />
     <ClInclude Include="src\grass.h" />
     <ClInclude Include="src\objects\Box.h" />

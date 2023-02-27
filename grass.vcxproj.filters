@@ -55,6 +55,9 @@
     <ClCompile Include="src\stuff\vec2.cpp">
       <Filter>src\stuff</Filter>
     </ClCompile>
+    <ClCompile Include="src\core\Scene.cpp">
+      <Filter>src\core</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\grass.h">
@@ -86,6 +89,9 @@
     </ClInclude>
     <ClInclude Include="src\stuff\vec2.h">
       <Filter>src\stuff</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\Scene.h">
+      <Filter>src\core</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
