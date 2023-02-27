@@ -52,13 +52,11 @@ public:
     Application(const Application&) = delete;
 	~Application();
 
-	void Loop();
+	void Run();
 
 
 protected:
 
-	
-    virtual void Run() = 0;
 
     virtual void Once() = 0;
     virtual void Update(double ts) = 0;

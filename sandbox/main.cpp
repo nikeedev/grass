@@ -6,6 +6,6 @@ int main()
 {
 	MyGame Application;
 
-	Application.Loop();
+	Application.Run();
 }
 

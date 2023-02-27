@@ -111,7 +111,7 @@ Application::~Application()
 	std::cout << "Application successfully finished" << std::endl;
 }
 
-void Application::Loop()
+void Application::Run()
 {
    
     double fps = 0.0f;
