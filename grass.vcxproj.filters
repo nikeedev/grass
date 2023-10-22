@@ -1,95 +1,48 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
-    </Filter>
-    <Filter Include="src">
-      <UniqueIdentifier>{ef0de7c3-7fb0-45dc-8979-7c5a57e76d55}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="src\core">
-      <UniqueIdentifier>{1662541f-08d8-45d7-a585-244a10637898}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="src\objects">
-      <UniqueIdentifier>{c0019b9d-8fe6-4b32-846b-2075f8a8571f}</UniqueIdentifier>
-    </Filter>
     <Filter Include="assets">
       <UniqueIdentifier>{997b7730-ea4d-4ea2-a1a7-622ecf0d0311}</UniqueIdentifier>
     </Filter>
     <Filter Include="assets\Textures">
       <UniqueIdentifier>{90fe6267-ffce-4e69-bb01-b7f1a75258f5}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\stuff">
+    <Filter Include="Grass">
+      <UniqueIdentifier>{d05faab1-183f-4c03-bc21-9c2ca26a61a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Grass\src">
+      <UniqueIdentifier>{35d1dd20-aa90-4c8a-83e5-19e4bd20bd8b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Grass\src\core">
+      <UniqueIdentifier>{1662541f-08d8-45d7-a585-244a10637898}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Grass\src\objects">
+      <UniqueIdentifier>{c0019b9d-8fe6-4b32-846b-2075f8a8571f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Grass\src\stuff">
       <UniqueIdentifier>{1bf2fb36-0e94-4944-9bc1-b5ff79884448}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\ui">
+    <Filter Include="Grass\src\ui">
       <UniqueIdentifier>{5a14c030-34f5-4dd8-b280-2488f46ee13d}</UniqueIdentifier>
     </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="src\grass.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="src\objects\Box.cpp">
-      <Filter>src\objects</Filter>
-    </ClCompile>
-    <ClCompile Include="src\objects\Sprite.cpp">
-      <Filter>src\objects</Filter>
-    </ClCompile>
-    <ClCompile Include="src\core\app.cpp">
-      <Filter>src\core</Filter>
-    </ClCompile>
-    <ClCompile Include="src\ui\button.cpp">
-      <Filter>src\ui</Filter>
-    </ClCompile>
-    <ClCompile Include="src\ui\textbox.cpp">
-      <Filter>src\ui</Filter>
-    </ClCompile>
-    <ClCompile Include="src\stuff\color.cpp">
-      <Filter>src\stuff</Filter>
-    </ClCompile>
-    <ClCompile Include="src\stuff\funcs.cpp">
-      <Filter>src\stuff</Filter>
-    </ClCompile>
-    <ClCompile Include="src\stuff\vec2.cpp">
-      <Filter>src\stuff</Filter>
-    </ClCompile>
-    <ClCompile Include="src\core\Scene.cpp">
-      <Filter>src\core</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="src\grass.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="src\objects\Box.h">
-      <Filter>src\objects</Filter>
-    </ClInclude>
-    <ClInclude Include="src\objects\Sprite.h">
-      <Filter>src\objects</Filter>
-    </ClInclude>
-    <ClInclude Include="src\core\app.h">
-      <Filter>src\core</Filter>
-    </ClInclude>
-    <ClInclude Include="src\ui\button.h">
-      <Filter>src\ui</Filter>
-    </ClInclude>
-    <ClInclude Include="src\ui\textbox.h">
-      <Filter>src\ui</Filter>
-    </ClInclude>
-    <ClInclude Include="src\stuff\color.h">
-      <Filter>src\stuff</Filter>
-    </ClInclude>
-    <ClInclude Include="src\stuff\funcs.h">
-      <Filter>src\stuff</Filter>
-    </ClInclude>
-    <ClInclude Include="src\stuff\vec2.h">
-      <Filter>src\stuff</Filter>
-    </ClInclude>
-    <ClInclude Include="src\core\Scene.h">
-      <Filter>src\core</Filter>
-    </ClInclude>
+    <Filter Include="Grass\include">
+      <UniqueIdentifier>{2e6a303f-be7a-42ae-b811-b0eb620f62c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Grass\include\core">
+      <UniqueIdentifier>{f05e3bd9-7c71-4220-84d9-859c62cc9af4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Grass\include\objects">
+      <UniqueIdentifier>{7f7d3986-5ed2-4ca3-89d6-979d84153700}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Grass\include\stuff">
+      <UniqueIdentifier>{5a157cf8-3748-4c7a-8463-7682ece60138}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Grass\include\ui">
+      <UniqueIdentifier>{0b4fcb9a-226e-428c-9dc1-289c6cd31aac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Grass\include\logging">
+      <UniqueIdentifier>{70f48796-fc69-4f33-893d-0c340d7713fe}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Image Include="assets\textures\White_Circle.png">
@@ -100,13 +53,82 @@
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <None Include="build.ps1" />
-    <None Include="Makefile" />
     <None Include="readme.md" />
     <None Include=".gitignore" />
     <None Include=".editorconfig" />
+    <None Include="vcpkg.json" />
+    <None Include=".gitattributes" />
+    <None Include="CMakeSettings.json" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="Changes.md" />
+    <Text Include="CMakeLists.txt" />
+    <Text Include="Grass\CMakeLists.txt">
+      <Filter>Grass</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Grass\include\core\App.h">
+      <Filter>Grass\include\core</Filter>
+    </ClInclude>
+    <ClInclude Include="Grass\include\core\Scene.h">
+      <Filter>Grass\include\core</Filter>
+    </ClInclude>
+    <ClInclude Include="Grass\include\objects\Box.h">
+      <Filter>Grass\include\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Grass\include\objects\Sprite.h">
+      <Filter>Grass\include\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Grass\include\stuff\Color.h">
+      <Filter>Grass\include\stuff</Filter>
+    </ClInclude>
+    <ClInclude Include="Grass\include\stuff\Funcs.h">
+      <Filter>Grass\include\stuff</Filter>
+    </ClInclude>
+    <ClInclude Include="Grass\include\stuff\Vec2.h">
+      <Filter>Grass\include\stuff</Filter>
+    </ClInclude>
+    <ClInclude Include="Grass\include\ui\Button.h">
+      <Filter>Grass\include\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="Grass\include\ui\Textbox.h">
+      <Filter>Grass\include\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="Grass\include\Grass.hpp">
+      <Filter>Grass\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Grass\include\logging\Logging.hpp">
+      <Filter>Grass\include\logging</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Grass\src\Grass.cpp">
+      <Filter>Grass\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Grass\src\core\App.cpp">
+      <Filter>Grass\src\core</Filter>
+    </ClCompile>
+    <ClCompile Include="Grass\src\core\Scene.cpp">
+      <Filter>Grass\src\core</Filter>
+    </ClCompile>
+    <ClCompile Include="Grass\src\objects\Box.cpp">
+      <Filter>Grass\src\objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Grass\src\objects\Sprite.cpp">
+      <Filter>Grass\src\objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Grass\src\stuff\Funcs.cpp">
+      <Filter>Grass\src\stuff</Filter>
+    </ClCompile>
+    <ClCompile Include="Grass\src\stuff\Vec2.cpp">
+      <Filter>Grass\src\stuff</Filter>
+    </ClCompile>
+    <ClCompile Include="Grass\src\ui\Button.cpp">
+      <Filter>Grass\src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="Grass\src\ui\Textbox.cpp">
+      <Filter>Grass\src\ui</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

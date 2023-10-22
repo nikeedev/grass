@@ -19,48 +19,52 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\core\scene.cpp" />
-    <ClCompile Include="src\core\app.cpp" />
-    <ClCompile Include="src\grass.cpp" />
-    <ClCompile Include="src\objects\Box.cpp" />
-    <ClCompile Include="src\objects\Sprite.cpp" />
-    <ClCompile Include="src\stuff\color.cpp" />
-    <ClCompile Include="src\stuff\funcs.cpp" />
-    <ClCompile Include="src\stuff\vec2.cpp" />
-    <ClCompile Include="src\ui\button.cpp" />
-    <ClCompile Include="src\ui\textbox.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="src\core\scene.h" />
-    <ClInclude Include="src\core\app.h" />
-    <ClInclude Include="src\grass.h" />
-    <ClInclude Include="src\objects\Box.h" />
-    <ClInclude Include="src\objects\Sprite.h" />
-    <ClInclude Include="src\stuff\color.h" />
-    <ClInclude Include="src\stuff\funcs.h" />
-    <ClInclude Include="src\stuff\vec2.h" />
-    <ClInclude Include="src\ui\button.h" />
-    <ClInclude Include="src\ui\textbox.h" />
-  </ItemGroup>
-  <ItemGroup>
     <Image Include="assets\textures\Black_Circle.png" />
     <Image Include="assets\textures\White_Circle.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".editorconfig" />
+    <None Include=".gitattributes" />
     <None Include=".gitignore" />
-    <None Include="build.ps1" />
-    <None Include="Makefile" />
+    <None Include="CMakeSettings.json" />
     <None Include="readme.md" />
+    <None Include="vcpkg.json" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="Changes.md" />
+    <Text Include="CMakeLists.txt" />
+    <Text Include="Grass\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Grass\include\core\App.h" />
+    <ClInclude Include="Grass\include\core\Scene.h" />
+    <ClInclude Include="Grass\include\Grass.hpp" />
+    <ClInclude Include="Grass\include\logging\Logging.hpp" />
+    <ClInclude Include="Grass\include\objects\Box.h" />
+    <ClInclude Include="Grass\include\objects\Sprite.h" />
+    <ClInclude Include="Grass\include\stuff\Color.h" />
+    <ClInclude Include="Grass\include\stuff\Funcs.h" />
+    <ClInclude Include="Grass\include\stuff\Vec2.h" />
+    <ClInclude Include="Grass\include\ui\Button.h" />
+    <ClInclude Include="Grass\include\ui\Textbox.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Grass\src\core\App.cpp" />
+    <ClCompile Include="Grass\src\core\Scene.cpp" />
+    <ClCompile Include="Grass\src\Grass.cpp" />
+    <ClCompile Include="Grass\src\objects\Box.cpp" />
+    <ClCompile Include="Grass\src\objects\Sprite.cpp" />
+    <ClCompile Include="Grass\src\stuff\Funcs.cpp" />
+    <ClCompile Include="Grass\src\stuff\Vec2.cpp" />
+    <ClCompile Include="Grass\src\ui\Button.cpp" />
+    <ClCompile Include="Grass\src\ui\Textbox.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <ProjectGuid>{BF884E37-4EA9-4718-BC85-718C103AE3B3}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>Grass</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -131,6 +135,9 @@
   <PropertyGroup Label="Vcpkg" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <VcpkgUseStatic>false</VcpkgUseStatic>
   </PropertyGroup>
+  <PropertyGroup Label="Vcpkg">
+    <VcpkgEnableManifest>true</VcpkgEnableManifest>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -190,7 +197,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\dev\C++\grass\depends\SDL2-VC\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)Grass\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
@@ -229,4 +236,9 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties vcpkg_1json__JsonSchema="https://json-schema.org/draft/2020-12/schema" />
+    </VisualStudio>
+  </ProjectExtensions>
 </Project>

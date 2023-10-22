@@ -1,44 +1,35 @@
 #include <iostream>
-#include <array>
+#include <vector>
 
+#define Print(var) std::cout << var << std::endl;
 
-class vec2
-{
+class Color {
 public:
-    float x;
-    float y;
 
-public:
-    vec2()
-    {
-        this->x = 0;
-        this->y = 0;
-    }
+    int r, g, b, a;
 
-    vec2(float x, float y)
-    {
-        this->x = x;
-        this->y = y;
-    }
-
-    ~vec2()
+    Color() : r(0), g(0), b(0), a(255)
     {}
+
+
+    Color(int r, int g, int b, int a)
+        : r(r), g(g), b(b), a(a)
+    {
+    }
 };
 
-
-void Print(vec2* vectors, size_t n)
-{
-    for (int i = 0; i < n; i++)
-    {
-        std::cout << vectors[i].x << ", " << vectors[i].y << std::endl;
-    }
+Color Hex2RGB(int hexValue) {
+    Color color
+    this->r = ((hexValue >> 32) & 0xFF) / 255.0;  // Extract the RR byte
+    this->g = ((hexValue >> 16) & 0xFF) / 255.0;   // Extract the GG byte
+    this->b = ((hexValue >> 8) & 0xFF) / 255.0;        // Extract the BB byte
+    this->a = (hexValue & 0xFF) / 255.0;
 }
+
 
 int main()
 {
-    vec2 vecs[2] = {vec2(5,5), vec2(8,8)};
-
-    Print(vecs, sizeof(vecs) / sizeof(vec2));
+    Color cool() = Color.Hex2RGB(0xffffffff);
 
     std::cin.get();
     
