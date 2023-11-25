@@ -1,7 +1,7 @@
 #include "core/App.h"
 
 
-Application::Application(const char* Title, Vec2 ScreenSize, std::vector<std::unique_ptr<Scene>> scenes, bool debug_mode) : Title(Title), ScreenSize(ScreenSize), scenes(scenes), debug_mode(false)
+Application::Application(const char* Title, Vec2 ScreenSize, bool debug_mode) : Title(Title), ScreenSize(ScreenSize), debug_mode(false)
 {
 
     SDL_version sdl_version;
@@ -46,19 +46,11 @@ Application::Application(const char* Title, Vec2 ScreenSize, std::vector<std::un
 
     GR_LOG("Renderer successfully created");
 
-    if (!scenes.empty()) {
-        this->scenes.reserve(scenes.size());
-
-        for (const auto& scene : scenes)
-            this->scenes.push_back(std::make_unique<Scene>(*scene));
-    }
-    else
-    {
-        GR_ERROR("No scenes were provided to the application!");
-    }
-
 }
 
+void Application::addScene(std::unique_ptr<Scene> scene) {
+    scenes.push_back(std::move(scene));
+}
 
 //Application::Application(const char* Title, Vec2 ScreenSize, Color background_color, bool debug_mode = false) : Title(Title), ScreenSize(ScreenSize), background_color(background_color), debug_mode(debug_mode)
 //{
@@ -131,8 +123,6 @@ void Application::Run()
     for (auto&& scene : scenes) {
 	    scene->Once(this->renderer);
     }
-
-    this->scenes[current_scene]->keyboard_state = SDL_GetKeyboardState(NULL);
 
 	while (isRunning)
 	{

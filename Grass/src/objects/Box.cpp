@@ -14,6 +14,7 @@ Box::Box(Vec2 position, Vec2 size, Color color)
 
 }
 
+
 Box::~Box()
 {}
 

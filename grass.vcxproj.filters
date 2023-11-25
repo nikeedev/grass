@@ -57,8 +57,8 @@
     <None Include=".gitignore" />
     <None Include=".editorconfig" />
     <None Include="vcpkg.json" />
-    <None Include=".gitattributes" />
     <None Include="CMakeSettings.json" />
+    <None Include=".gitattributes" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="Changes.md" />

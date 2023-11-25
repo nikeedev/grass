@@ -17,6 +17,10 @@ protected:
 
 public:
 
+    Box() : position(Vec2()), size(Vec2()), color(Color()) {
+        box = SDL_Rect();
+    }
+
     Box(Vec2 position, Vec2 size, Color color);
     
     ~Box();

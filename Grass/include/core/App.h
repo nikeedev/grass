@@ -15,7 +15,7 @@
 
 #undef main
 
-#define grass_version "0.2.4a"
+#define grass_version "0.3.0a"
 #define grass_code_name "dev"
 
 
@@ -45,12 +45,13 @@ protected:
 public:
 
 	//Application(const char* Title, Vec2 ScreenSize, Color background_color, bool debug_mode);
-    Application(const char* Title, Vec2 ScreenSize, std::vector<std::unique_ptr<Scene>> scenes, bool debug_mode);
+    Application(const char* Title, Vec2 ScreenSize, bool debug_mode);
 
     Application(const Application&) = delete;
 	~Application();
 
-	void Run();
+    void addScene(std::unique_ptr<Scene> scene);
+    void Run();
 
 
 protected:
