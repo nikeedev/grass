@@ -48,9 +48,7 @@ Application::Application(const char* Title, Vec2 ScreenSize, bool debug_mode) : 
 
 }
 
-void Application::addScene(std::unique_ptr<Scene> scene) {
-    scenes.push_back(std::move(scene));
-}
+
 
 //Application::Application(const char* Title, Vec2 ScreenSize, Color background_color, bool debug_mode = false) : Title(Title), ScreenSize(ScreenSize), background_color(background_color), debug_mode(debug_mode)
 //{
